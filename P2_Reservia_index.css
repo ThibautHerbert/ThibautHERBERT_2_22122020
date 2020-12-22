@@ -4,11 +4,16 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face{
+    font-family: 'Raleway-ExtraLight';
+    src: url('Raleway/static/Raleway-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 body{
     font-family: serif;
     font-size: 1em;
-    color: purple;
+    color: black;
     margin : 20px auto;
     margin-left: 50px;
     max-width: 1024px;
@@ -62,37 +67,39 @@ h1{
 }
 h2{
     font-size: .7em;
+    font-family: 'Raleway-ExtraLight';
+}
+#filter{
+    display: flex;
 }
 
 /*FOOTER*/
-}
+
 /*A FAIRE
-remettre la police en noir
-ajuster la marge*/
-footer {
+ajuster la marge
+J'ai perdu ce que j'avais fait
+le push a du supprimer un de mes commits par un autre*/
+footer{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around; /*"a propos" est plus proche de la gauche que assistance de la droite*/
-    background-color: rgb(242, 242, 242);
-    padding-top: 30px;
+    justify-content: space-between;
+    background-color: #F2F2F2;
+    padding-top: 35px;
+    padding-left: 20px;
+    padding-right: 200px;
     
 }
 .footerblocks{
-    color: black; /*ok our les titres*/
-    font-weight: bold;/*marche pas*/
-    font-size: 0.9em;
+    font-weight: bold;
+    
+    font-size: 0.8em;
+    
 }
-.footertitle{
-    font-weight: bold; /*marche pas*/
-    color: yellow; /*ne change pas*/
+.link{
+    font-weight: normal;
+    padding-right: 40px;
+    
     
 }
 
-.link{
-    font-family: ;
-    font-weight: normal;
-    font-size: 0.8em;
-    padding: 5%;/*j'arrive pas à faire moins d'écart c'est soit aucun soit le même peu importe la taille*/
-}
 
 
