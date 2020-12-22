@@ -11,11 +11,11 @@
         <header>
             <img id="logosite" src="images/logo/Reservia@3x.png"> 
             <nav>
-                Hébergement
-                Activités
-                S'inscrire
+                <a href="#">Hébergement</a>
+                <a href="#">Activités</a>
+                <a href="#">S'inscrire</a>                
             </nav>
-            <div> <!--brouillon? insérer logo reservia--> 
+            <div>
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <h2>En plein centre ville ou en pleine nature</h2>
                 <!--logo + barre de recherche rechercher-->
@@ -28,7 +28,7 @@
         </header>
 <!-- décider si les filtres se trouvent dans le header ou après--> 
         <div>
-                Filtres <!--filtres en a href pour imaginer cliquer dessus pour les changer-->
+                <p>Filtres</p> <!--filtres en a href pour imaginer cliquer dessus pour les changer-->
                 <a href="economic" >économique</a> <!--ajouter un logo devant chaque filtre-->
                 <a href="family" >familial</a>
                 <a href="romantic" >romantique</a>
@@ -37,30 +37,100 @@
                 <!-- attention ici le chiffre 500 est aléatoire besoin de back end ? normalement
                 pour lier avec la recherche de ville-->
         </div>
+
+        <!--BODY-->
+
         <section>
-            <article>
-                 
+            <article> <!--flexbox column-->
                 <h1>Hébergements à Marseille</h1>
             <!-- 6 photos et liens--> 
+                <div id="location-blocks">
+                    <div class="night"> 
+                       <a href="#"><img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"></a>
+                        <h3>Auberge la Cannebière</h3>
+                        <p>Nuit à partir de <mark>25€</mark></p>
+                        <img src=""> <!--étoiles-->
+                    </div>
+                    <div class="night">
+                        <a href="#"> <img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"></a>
+                        <h3>Hôtel du port</h3>
+                        <p>Nuit à partir de <mark>52€</mark></p>
+                        <img src=""> <!--étoiles-->
+                    </div>
+                    <p>Afficher plus</p>
+                </div>
             </article>
-            <aside>
-            <!--les plus populaires sur la droite-->
-            <h1>Les plus populaires + logo</h1>
+            <aside> <!--les plus populaires sur la droite-->
+                <h1>Les plus populaires + logo</h1> <!--flex column avec un wrap ou 
+                séparation du h1 en flex row d'avec les div class pour faire un autre flex column-->
+                <div class="popularlocation">
+                    <img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg">
+                    <h3>Hôtel Le soleil du matin</h3>
+                    <p>Nuit à partir de 128€</p>
+                    <img src=""> <!--étoiles-->
+                <div class="popularlocation">
+                    <img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg">
+                    <h3>Au coeur de l'eau Chambres d'hôtes</h3>
+                    <p>Nuit à partir de 71€</p>
+                    <img src=""> <!--étoiles-->
+                <div class="popularlocation">
+                    <img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg">
+                    <h3>Hôtel Tout bleu et Blanc</h3>
+                    <p>Nuit à partir de 68€</p>
+                    <img src=""> <!--étoiles-->
             </aside>
-             <div>
+             <div id="activities">
                     <!--décider de cette section est ce que c'est bien 
                         dans un div comment mettre les photos
                     1 photo vertical 2 photos horizontales x2-->
+                    <div class="activitiesblocks">
+                        <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg">
+                        <p>Vieux port</p>
+                    <div class="activitiesblocks">
+                        <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg">
+                        <p>Fort de Pomègues</p>
+                    <div class="activitiesblocks">
+                        <img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg">
+                        <p>Îles du Frioul</p>
+                    <div class="activitiesblocks">
+                        <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg">
+                        <p>Parc National des Calanques</p>
+                    <div class="activitiesblocks">
+                        <img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg">
+                        <p>Notre-Dame-de-la-Garde</p>
+                    <div class="activitiesblocks">
+                        <img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg">
+                        <p>Parc Longchamps</p>
              </div>
         </section>
+
+        <!--FOOTER-->
         <footer>
-            <div id="footer"><!-- 3div dans le footer ou un seul pour faire un flexbox
+            <!-- 3div dans le footer ou un seul pour faire un flexbox
                 mettre des liens hypertextes -->
-            <p>
-               
-            </p> </div>
+            </div>
             <div></div>
             <div></div>
+            	<div id="footer"> 
+		<div class="footerblocks"
+			<h3 class="footertitle">A propos</h3> <!--titre footer ne sert pas pour la color--->
+			<ul>
+				<li>Fonctionnement du site</li>
+				<li>Conditions générales de vente</li>
+			</ul>
+		</div>
+		<div class="footerblocks"	
+			<h3 class="footertitle">Nos hébergements</h3>
+			<ul>
+				<li>Charte qualité</li>
+				<li>Soumettre votre hôtel</li>
+			</ul>
+		</div>
+		<div class="footerblocks"
+			<h3 class="footertitle">Assistance</h3>
+			<ul class="coordonnees">
+				<li>Centre d'aide</li>
+				<li>Nous contacter</li>
     </footer>
 </body>
 </html>
