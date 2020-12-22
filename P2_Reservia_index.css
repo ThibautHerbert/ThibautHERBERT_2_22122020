@@ -1,0 +1,65 @@
+@font-face{
+    font-family: 'Raleway';
+    src: url('Raleway/static/Raleway-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: serif;
+    font-size: 1em;
+    color: purple;
+    margin : 20px auto;
+    margin-left: 50px;
+    max-width: 1024px;
+    font-family: 'Raleway';
+}
+a{
+    text-decoration: none;/*enleve le surlignage sur les liens*/
+    color: black;}
+ul{
+    list-style-type: none;
+    padding: 2px; /*aligne les titres avec les liens*/}
+    
+/*HEADER*/
+nav a{ /*attention s'inscrire doit être bleu et gras*/
+    color: black;
+    text-decoration: none; /*enleve le surlignage*/
+}
+nav a:hover{ /*marche pour le header*/
+    color: #2078FD;
+    border-top: 3px solid #2078FD;
+
+
+/*FOOTER*/
+}
+/*A FAIRE
+remettre la police en noir
+ajuster la marge*/
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; /*a propos est plus proche de la gauche que assistance de la droite*/
+    background-color: rgb(242, 242, 242);
+    padding-top: 30px;
+    
+}
+.footerblocks{
+    color: black; /*ok our les titres*/
+    font-weight: bold;/*marche pas*/
+    font-size: 0.9em;
+}
+.footertitle{
+    font-weight: bold; /*marche pas*/
+    color: yellow; /*ne change pas*/
+    
+}
+
+.link{
+    font-family: ;
+    font-weight: normal;
+    font-size: 0.8em;
+    padding: 5%;/*j'arrive pas à faire moins d'écart c'est soit aucun soit le même peu importe la taille*/
+}
+
+
