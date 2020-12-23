@@ -66,11 +66,66 @@ h1{
     font-size: 1em;
 }
 h2{
-    font-size: .7em;
+    font-size: .8em; /*entre le .7 et le .8em*/
     font-family: 'Raleway-ExtraLight';
+    color: #404040; /*couleur pas sûr, c'est plus noir ou plus light*/
 }
+.localisation{
+    background-color: #F2F2F2;
+    padding: 5px; /*padding enlève les bordures visibles*/
+     /*attention marche pas*/
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 24px;
+    width: 24px;
+    position: relative; /*à vérifier le choix*/
+    top: 11px; /*top et left permettent de se coller à city*/
+    left: 4px;
+    margin-top: 10px;
+    }
+#city{
+    height: 33px;
+    font-weight: bold;
+    color: black; /*j'arrive pas plus foncé mais la couleur change*/
+    padding-left: 10px;
+    border: solid .1em #F2F2F2;
+    }
+    
+    
+.search_button{
+    background-color: #2078FD;
+    color: white;
+    padding: 7px;
+    margin-bottom: 5px; /*attention marche pas*/
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    right: 4px; /*permet de se coller à city*/
+    font-size: .9em;
+}
+    
 #filter{
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end; /*centre le mot Filtres avec les blocs filterlabels*/
+    background-color: yellow;
+    width: 800px;
+}
+.filterlabels{
+    border: solid #F2F2F2 2px;
+    border-radius: 50px;
+    height: 30px;
+    font-weight: bold;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 0.9em;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /*YES aligne la police au centre des bulles de filtres*/
+        /*line-height: px; à explorer les possibilités*/
 }
 
 /*FOOTER*/
