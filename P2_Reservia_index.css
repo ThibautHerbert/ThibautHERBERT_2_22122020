@@ -16,7 +16,7 @@ body{
     color: black;
     margin : 20px auto;
     margin-left: 50px;
-    max-width: 1024px;
+    max-width: 1446px;
     font-family: 'Raleway';
 }
 a{
@@ -109,7 +109,6 @@ h2{
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end; /*centre le mot Filtres avec les blocs filterlabels*/
-    background-color: yellow;
     width: 800px;
 }
 .filterlabels{
@@ -127,6 +126,44 @@ h2{
     align-items: center; /*YES aligne la police au centre des bulles de filtres*/
         /*line-height: px; à explorer les possibilités*/
 }
+/*BLOCKS*/
+section{
+    display: flex;
+    height: 624px;
+    
+}
+article{
+    display: flexbox;
+    flex-direction: column;
+    background-color: red;
+    width: 70%;
+    height: 624px;
+}
+#location-blocks{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+img{ /*régler la taille des images plus tard spécifiquement par bloc et non pour toutes*/
+    max-width: 200px; /*attention max height bloque l'agrandissment de width 
+    et inversement puisqu'il garde les proportions des photos
+    comment recadrer des photos ?*/
+    max-height: 120px;
+}
+aside{
+    width:30%;
+    background-color: azure;
+}
+
+/*2EME BLOCK ACTIVITIES*/
+#activities{ /*doit être horizontal*/
+    width: 100%;
+    display: flex;
+    flex-direction: row; /*problème*/
+    justify-content: space-around;
+}
 
 /*FOOTER*/
 
@@ -135,6 +172,7 @@ ajuster la marge
 J'ai perdu ce que j'avais fait
 le push a du supprimer un de mes commits par un autre*/
 footer{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: #F2F2F2;
