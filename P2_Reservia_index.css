@@ -130,20 +130,37 @@ h2{
 section{
     display: flex;
     height: 624px;
+    justify-content: space-between;
     
 }
 article{
     display: flexbox;
     flex-direction: column;
-    background-color: red;
-    width: 70%;
+    background-color: #F2F2F2;
+    width: 870px;
     height: 624px;
+    border-radius: 10px;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 15px;
 }
 #location-blocks{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    align-items: space-around;
     
+    height: 480px;
+    
+}
+.night{
+    height: 198px;
+    width: 246px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px grey; /*tester plusieurs ombre partout pas que sur la droite et sinon tester bordure grise*/
+    padding: 5px;
 }
 
 img{ /*régler la taille des images plus tard spécifiquement par bloc et non pour toutes*/
@@ -153,8 +170,15 @@ img{ /*régler la taille des images plus tard spécifiquement par bloc et non po
     max-height: 120px;
 }
 aside{
-    width:30%;
-    background-color: azure;
+    width:418px; /*à terme peut etre recalculer le bon pourcentage pour avoir une page ajusté plutot qu'en pixel*/
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    height: 624px; /*attention lorsque l'on rajoute des padding cela augmente la taille*/
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+
 }
 
 /*2EME BLOCK ACTIVITIES*/
