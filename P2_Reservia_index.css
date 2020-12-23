@@ -10,6 +10,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face{
+    font-family: 'Raleway-Bold';
+    src: url('Raleway/static/Raleway-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 body{
     font-family: serif;
     font-size: 1em;
@@ -18,6 +24,10 @@ body{
     margin-left: 50px;
     max-width: 1446px;
     font-family: 'Raleway';
+}
+mark{
+    font-weight: bold;
+    background-color: white; /*vérifier si y'a plus simple*/
 }
 a{
     text-decoration: none;/*enleve le surlignage sur les liens*/
@@ -34,6 +44,7 @@ ul{
 nav a{ /*attention s'inscrire doit être bleu et gras*/
     color: black;
     text-decoration: none; /*enleve le surlignage*/
+    padding-right: 40px; /*sépare les liens nav horizontalement*/
 }
 nav a:hover{ /*marche pour le header*/
     color: #2078FD;
@@ -43,7 +54,6 @@ nav{
     justify-content: flex-end;
     align-items: space-around; /*marche pas*/
     padding: 20px;
-    background-color: yellow;
     font-size: 0.9em;
 }
 /*avec ou sans les li je n'arrive pas à écarter hébergement activités et s'inscrire*/
@@ -52,24 +62,43 @@ nav{
     flex-direction: row;
     justify-content: flex-start;
     align-items: space-around;
-    background-color: purple;
-}
+    }
 .linkheader{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: space-around;
-    background-color: green;
-}
+    }
 /*pas sûr que les linkheader et les ol li soient utiles*/
+/*FONTS*/
 h1{
     font-size: 1em;
+    font-family: Raleway-Bold;
+
 }
 h2{
     font-size: .8em; /*entre le .7 et le .8em*/
     font-family: 'Raleway-ExtraLight';
     color: #404040; /*couleur pas sûr, c'est plus noir ou plus light*/
 }
+h3
+{
+    padding-left: 10px;
+    position: relative;
+    bottom: 15px;
+}
+.pnight{
+    position: relative;
+    bottom: 25px;
+    padding-left: 10px;
+}
+.pnightaside{
+    position: relative;
+    bottom: 40px;
+    padding-left: 10px;
+}
+/*fin des FONTS*/
+
 .localisation{
     background-color: #F2F2F2;
     padding: 5px; /*padding enlève les bordures visibles*/
@@ -126,6 +155,10 @@ h2{
     align-items: center; /*YES aligne la police au centre des bulles de filtres*/
         /*line-height: px; à explorer les possibilités*/
 }
+.filterlabels :hover{ 
+    color: #2078FD;
+    border-top: 3px solid #2078FD;} /*marche pas*/
+
 /*BLOCKS*/
 section{
     display: flex;
@@ -147,13 +180,11 @@ article{
 }
 #location-blocks{
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    align-items: space-around;
-    
     height: 480px;
-    
-}
+    }
 .night{
     height: 198px;
     width: 246px;
@@ -161,13 +192,25 @@ article{
     border-radius: 10px;
     box-shadow: 2px 2px 1px grey; /*tester plusieurs ombre partout pas que sur la droite et sinon tester bordure grise*/
     padding: 5px;
+      
+}
+.imgnight{
+    width: 234px;
+    max-height: 113px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 img{ /*régler la taille des images plus tard spécifiquement par bloc et non pour toutes*/
-    max-width: 200px; /*attention max height bloque l'agrandissment de width 
+    max-width: 300px; /*attention max height bloque l'agrandissment de width 
     et inversement puisqu'il garde les proportions des photos
     comment recadrer des photos ?*/
-    max-height: 120px;
+    max-height: 200px;
+    }
+.rating > span:hover:before {
+   content: "\2605";
+   position: absolute;
+   top: 0; left: 0;
 }
 aside{
     width:418px; /*à terme peut etre recalculer le bon pourcentage pour avoir une page ajusté plutot qu'en pixel*/
@@ -178,7 +221,37 @@ aside{
     padding-top: 15px;
     padding-right: 30px;
     padding-bottom: 15px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+.popularlocation{
+    height: 144px;
+    width: 335px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px grey;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: flex-start;
+    margin-top: 34px;
+    
+    
+}
+.nightaside{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.imgaside{
+    width:129px;
+    max-height: 132px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    
 }
 
 /*2EME BLOCK ACTIVITIES*/
@@ -187,6 +260,10 @@ aside{
     display: flex;
     flex-direction: row; /*problème*/
     justify-content: space-around;
+}
+.imgactivities{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 /*FOOTER*/

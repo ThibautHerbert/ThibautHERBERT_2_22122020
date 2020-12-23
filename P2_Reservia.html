@@ -30,7 +30,7 @@
         </header>
 <!-- décider si les filtres se trouvent dans le header ou après--> 
         <div id="filter">
-                <p>Filtres</p> <!--filtres en a href pour imaginer cliquer dessus pour les changer-->
+                <p =class="filterline">Filtres</p> <!--filtres en a href pour imaginer cliquer dessus pour les changer-->
                 <a href="economic" class="filterlabels" >économique</a> <!--ajouter un logo devant chaque filtre-->
                 <a href="family" class="filterlabels">familial</a>
                 <a href="romantic" class="filterlabels">romantique</a>
@@ -48,39 +48,42 @@
             <!-- 6 photos et liens--> 
                 <div id="location-blocks">
                     <div class="night"> 
-                        <a href="#"><img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"></a>
+                        <a href="#"><img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" class="imgnight"></a>
                         <h3>Auberge la Cannebière</h3>
-                        <p>Nuit à partir de <mark>25€</mark></p>
+                        <p class="pnight">Nuit à partir de <mark>25€</mark></p>
+                        <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                        </div>
                         <img src=""> <!--étoiles-->
                     </div>
                     <div class="night">
-                        <a href="#"> <img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"></a>
+                        <a href="#"> <img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" class="imgnight"></a>
                         <h3>Hôtel du port</h3>
-                        <p>Nuit à partir de <mark>52€</mark></p>
+                        <p class="pnight">Nuit à partir de <mark>52€</mark></p>
                         <img src=""> <!--étoiles-->
                     </div>
                     <div class="night"> 
-                        <a href="#"><img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"></a>
+                        <a href="#"><img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" class="imgnight"></a>
                         <h3>Hôtel Les mouettes</h3>
-                        <p>Nuit à partir de <mark>76€</mark></p>
+                        <p class="pnight">Nuit à partir de <mark>76€</mark></p>
                         <img src=""> <!--étoiles-->
                     </div>
                     <div class="night">
-                        <a href="#"> <img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"></a>
+                        <a href="#"> <img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" class="imgnight"></a>
                         <h3>Hôtel de la mer</h3>
-                        <p>Nuit à partir de <mark>46€</mark></p>
+                        <p class="pnight">Nuit à partir de <mark>46€</mark></p>
                         <img src=""> <!--étoiles-->
                     </div>
                     <div class="night"> 
-                        <a href="#"><img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"></a>
+                        <a href="#"><img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" class="imgnight"></a>
                         <h3>Auberge Le Panier</h3>
-                        <p>Nuit à partir de <mark>23€</mark></p>
+                        <p class="pnight">Nuit à partir de <mark>23€</mark></p>
                         <img src=""> <!--étoiles-->
                     </div>
                     <div class="night">
-                        <a href="#"> <img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"></a>
+                        <a href="#"> <img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" class="imgnight"></a>
                         <h3>Hôtel chez Amina</h3>
-                        <p>Nuit à partir de <mark>96€</mark></p>
+                        <p class="pnight">Nuit à partir de <mark>96€</mark></p>
                         <img src=""> <!--étoiles-->
                     </div>
                 </div>
@@ -90,20 +93,29 @@
                 <h1>Les plus populaires + logo</h1> <!--flex column avec un wrap ou 
                 séparation du h1 en flex row d'avec les div class pour faire un autre flex column-->
                 <div class="popularlocation">
-                    <img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg">
-                    <h3>Hôtel Le soleil du matin</h3>
-                    <p>Nuit à partir de 128€</p>
-                    <img src=""> <!--étoiles-->
+                    <img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" class="imgaside">
+                    <div class="nightaside">
+                        <h3>Hôtel Le soleil du matin</h3>
+                        <p class="pnightaside">Nuit à partir de 128€</p>
+                        <img src=""> <!--étoiles-->
+                    </div>
+                </div>
                 <div class="popularlocation">
-                    <img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg">
-                    <h3>Au coeur de l'eau Chambres d'hôtes</h3>
-                    <p>Nuit à partir de 71€</p>
-                    <img src=""> <!--étoiles-->
+                    <img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" class="imgaside">
+                    <div class="nightaside">
+                        <h3>Au coeur de l'eau Chambres d'hôtes</h3>
+                        <p class="pnightaside">Nuit à partir de 71€</p>
+                        <img src=""> <!--étoiles-->
+                    </div>
+                </div>
                 <div class="popularlocation">
-                    <img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg">
-                    <h3>Hôtel Tout bleu et Blanc</h3>
-                    <p>Nuit à partir de 68€</p>
-                    <img src=""> <!--étoiles-->
+                    <img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" class="imgaside">
+                    <div class="nightaside">
+                        <h3>Hôtel Tout bleu et Blanc</h3>
+                        <p class="pnightaside">Nuit à partir de 68€</p>
+                        <img src=""> <!--étoiles-->
+                    </div>
+                </div>
             </aside>
         </section>
         <div id="activities">
@@ -111,22 +123,22 @@
                         dans un div comment mettre les photos
                     1 photo vertical 2 photos horizontales x2-->
                     <div class="activitiesblocks">
-                        <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg">
+                        <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" class="imgactivities">
                         <p>Vieux port</p>
                     <div class="activitiesblocks">
-                        <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg">
+                        <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"class="imgactivities">
                         <p>Fort de Pomègues</p>
                     <div class="activitiesblocks">
-                        <img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg">
+                        <img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"class="imgactivities">
                         <p>Îles du Frioul</p>
                     <div class="activitiesblocks">
-                        <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg">
+                        <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"class="imgactivities">
                         <p>Parc National des Calanques</p>
                     <div class="activitiesblocks">
-                        <img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg">
+                        <img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"class="imgactivities">
                         <p>Notre-Dame-de-la-Garde</p>
                     <div class="activitiesblocks">
-                        <img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg">
+                        <img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg"class="imgactivities">
                         <p>Parc Longchamps</p>
         </div>
 
