@@ -101,17 +101,21 @@ h3
 
 .localisation{
     background-color: #F2F2F2;
-    padding: 5px; /*padding enlève les bordures visibles*/
+    padding: 10px; /*padding enlève les bordures visibles*/
      /*attention marche pas*/
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
-    height: 24px;
-    width: 24px;
+    height: 14px;
+    width: 14px;
     position: relative; /*à vérifier le choix*/
     top: 11px; /*top et left permettent de se coller à city*/
     left: 4px;
     margin-top: 10px;
     }
+.iconlocalisation{
+    width: 10px;
+    height: 10px;
+}
 #city{
     height: 33px;
     font-weight: bold;
@@ -145,9 +149,10 @@ h3
     border-radius: 50px;
     height: 30px;
     font-weight: bold;
+    text-transform: capitalize;
     padding: 5px;
     padding-right: 20px;
-    padding-left: 20px;
+    padding-left: 35px;
     font-size: 0.9em;
     margin-top: 20px;
     display: flex;
@@ -158,6 +163,36 @@ h3
 .filterlabels :hover{ 
     color: #2078FD;
     border-top: 3px solid #2078FD;} /*marche pas*/
+
+.filtericons
+{
+    width: 20px;
+    height: 20px;
+    border: solid #F2F2F2 2px;
+    border-radius: 50px;
+    padding: 10px;
+    background-color: #deebff;
+    position: relative;
+    left: 32px;
+    /*filter marche pas pour ces icônes, il change la couleur de toute la bulle et pas simplement le svg*/
+}
+#INFO{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 25%;}
+
+.info{
+    color: blue; /*marche pas*/
+    filter: invert(29%) sepia(100%) saturate(4175%) hue-rotate(210deg) brightness(99%) contrast(100%); 
+    /*attention la couleur de la bordure n'est pas bonne*/
+    width: 10px;
+    height: 10px;
+    border: solid #F2F2F2 2px;
+    border-radius: 50px;
+    padding: 3px;
+}
 
 /*BLOCKS*/
 section{
@@ -212,6 +247,20 @@ img{ /*régler la taille des images plus tard spécifiquement par bloc et non po
    position: absolute;
    top: 0; left: 0;
 }
+.stars{
+    width: 14px;
+    height: 14px;
+    filter: invert(29%) sepia(100%) saturate(4175%) hue-rotate(210deg) brightness(99%) contrast(100%);
+    /*changer la couleur d'un svg solution: 
+    https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element et pour le choix de couleur:
+    https://codepen.io/sosuke/pen/Pjoqqp*/ 
+}
+.nostar{
+    width: 14px;
+    height: 14px;
+    opacity: 10%;
+}
+
 aside{
     width:418px; /*à terme peut etre recalculer le bon pourcentage pour avoir une page ajusté plutot qu'en pixel*/
     background-color: #F2F2F2;
