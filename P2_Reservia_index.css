@@ -5,25 +5,18 @@
     font-style: normal;
 }
 @font-face{
-    font-family: 'Raleway-ExtraLight';
-    src: url('Raleway/static/Raleway-ExtraLight.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face{
-    font-family: 'Raleway-Bold';
+    font-family: 'Raleway';
     src: url('Raleway/static/Raleway-Bold.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
 }
 body{
-    font-family: serif;
     font-size: 1em;
     color: black;
-    margin : 20px auto;
-    margin-left: 50px;
+    margin-right : 20% auto;
+    margin-left: 20% ; /*problème ne s'aligne pas comme à droite, '20% auto' colle le body à gauche*/
     max-width: 1446px;
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
 }
 mark{
     font-weight: bold;
@@ -41,56 +34,57 @@ ul{
     width: 8%;
     float: left;
 }
-nav a{ /*attention s'inscrire doit être bleu et gras*/
-    color: black;
+#subscription{
+    float: right;
+    color: #2078FD;
+    font-weight: bold;
+    padding-top: 50px;
+}
+nav a{ 
     text-decoration: none; /*enleve le surlignage*/
-    padding-right: 40px; /*sépare les liens nav horizontalement*/
+    padding-right: 60px; /*sépare les liens nav horizontalement*/
 }
 nav a:hover{ /*marche pour le header*/
     color: #2078FD;
     border-top: 3px solid #2078FD;}
 nav{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: space-around; /*marche pas*/
-    padding: 20px;
     font-size: 0.9em;
 }
-/*avec ou sans les li je n'arrive pas à écarter hébergement activités et s'inscrire*/
+.hebergementspage{
+    border-top: 3px solid #2078FD; /*attention le border top va trop à droite sur activités*/
+    padding-top: 50px;
+}
+.Activitiespage{
+    padding-top: 50px;
+}
+
 #link-header{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: space-around;
     }
-.linkheader{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: space-around;
-    }
-/*pas sûr que les linkheader et les ol li soient utiles*/
+
 /*FONTS*/
 h1{
     font-size: 1em;
-    font-family: Raleway-Bold;
-
-}
+    }
 h2{
     font-size: .8em; /*entre le .7 et le .8em*/
-    font-family: 'Raleway-ExtraLight';
     color: #404040; /*couleur pas sûr, c'est plus noir ou plus light*/
 }
-h3
+/*bricolage de placement des fonts*/
+.sectiontitles
 {
-    padding-left: 10px;
-    position: relative;
-    bottom: 15px;
+   position: relative;
+   bottom: 10px;
 }
 .pnight{
     position: relative;
-    bottom: 25px;
-    padding-left: 10px;
+    bottom: 40px;
 }
 .pnightaside{
     position: relative;
@@ -160,28 +154,55 @@ h3
     align-items: center; /*YES aligne la police au centre des bulles de filtres*/
         /*line-height: px; à explorer les possibilités*/
 }
-.filterlabels :hover{ 
+.filterlabels:hover{ 
     color: #2078FD;
-    border-top: 3px solid #2078FD;} /*marche pas*/
+    border-top: 3px solid #2078FD;}
 
-.filtericons
+.filterlink{
+    height: 50px;
+    width: 10px;
+}
+
+.filtericons /*c'est l'image en svg directement, pas utilisé actuellement*/
 {
-    width: 20px;
-    height: 20px;
+    width: 20px; /*attention ne change plus*/
+    height: 20px; /*attention ne change plus*/
     border: solid #F2F2F2 2px;
     border-radius: 50px;
     padding: 10px;
     background-color: #deebff;
     position: relative;
     left: 32px;
+    
     /*filter marche pas pour ces icônes, il change la couleur de toute la bulle et pas simplement le svg*/
 }
+.svg-inline--fa { /*revérifier les tailles des icônes ce n'est pas bon*/
+    color: #0065FC;
+    padding: 13px;
+    background-color: #deebff;
+    border-radius: 50px;
+    width: 15px;
+    position: relative;
+    left: 30px;}
+.fa-info{
+    color: #0065FC;
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    border: solid #F2F2F2 2px;
+    border-radius: 50px;
+    padding: 3px;
+    position: relative;
+    left: 0;
+    margin-right: 10px; /*attention margin décale plus de 500logements et fait sauter à la ligne si le width de #INFO est trop petit*/
+}
+
 #INFO{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 10px;
-    width: 25%;}
+    width: 27%;}
 
 .info{
     color: blue; /*marche pas*/
@@ -199,52 +220,64 @@ section{
     display: flex;
     height: 624px;
     justify-content: space-between;
+    margin-bottom: 70px;
+    padding-bottom: 10px;
     
 }
 article{
-    display: flexbox;
+    display: flex;
     flex-direction: column;
     background-color: #F2F2F2;
-    width: 870px;
+    width: 65%;
     height: 624px;
     border-radius: 10px;
     padding-left: 30px;
     padding-top: 15px;
     padding-right: 30px;
-    padding-bottom: 15px;
+    padding-bottom: 40px;
+    justify-content: space-between; /*center c'est bien, 
+    mais space between permet à 'afficher plus' d'être dessous les cartes de réservation !!*/
+    margin-bottom: 20px;
 }
 #location-blocks{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    height: 480px;
+    background-color: red;
     }
 .night{
-    height: 198px;
-    width: 246px;
+    height: 240px; /*pas du tout optimum*/
+    width: 25%;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 2px 2px 1px grey; /*tester plusieurs ombre partout pas que sur la droite et sinon tester bordure grise*/
-    padding: 5px;
-      
+    box-shadow: 2px 2px 1px grey; /*tester plusieurs ombres partout pas que sur la droite et sinon tester bordure grise*/
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin: 17px;
+    align-content: center;
 }
 .imgnight{
-    width: 234px;
+    width: 220px;
     max-height: 113px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
-
 img{ /*régler la taille des images plus tard spécifiquement par bloc et non pour toutes*/
-    max-width: 300px; /*attention max height bloque l'agrandissment de width 
+    max-width: 500px; /*attention max height bloque l'agrandissment de width 
     et inversement puisqu'il garde les proportions des photos
     comment recadrer des photos ?*/
-    max-height: 200px;
+    max-height: 500px;
     }
+.divrating{
+    display: flex;
+}
 .rating > span:hover:before {
    content: "\2605";
-   position: absolute;
+   position: absolute; /*est-encore utile ?*/
    top: 0; left: 0;
 }
 .stars{
@@ -253,16 +286,20 @@ img{ /*régler la taille des images plus tard spécifiquement par bloc et non po
     filter: invert(29%) sepia(100%) saturate(4175%) hue-rotate(210deg) brightness(99%) contrast(100%);
     /*changer la couleur d'un svg solution: 
     https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element et pour le choix de couleur:
-    https://codepen.io/sosuke/pen/Pjoqqp*/ 
+    https://codepen.io/sosuke/pen/Pjoqqp*/
+    position: relative;
+    bottom:50px;
 }
 .nostar{
     width: 14px;
     height: 14px;
     opacity: 10%;
+    position: relative;
+    bottom:50px;
 }
 
 aside{
-    width:418px; /*à terme peut etre recalculer le bon pourcentage pour avoir une page ajusté plutot qu'en pixel*/
+    width: 25%; /*à terme peut etre recalculer le bon pourcentage pour avoir une page ajusté plutot qu'en pixel*/
     background-color: #F2F2F2;
     border-radius: 10px;
     height: 624px; /*attention lorsque l'on rajoute des padding cela augmente la taille*/
@@ -304,44 +341,233 @@ aside{
 }
 
 /*2EME BLOCK ACTIVITIES*/
-#activities{ /*doit être horizontal*/
-    width: 100%;
-    display: flex;
-    flex-direction: row; /*problème*/
-    justify-content: space-around;
+#gridblock{ 
+    display:grid;
+    grid-template-columns:repeat(4,1fr); 
+    grid-gap: 10px;
+    grid-template-rows: 50% 50%;
+    
+}
+#gridblock img{
+    max-width: 100%;
+    max-height: auto;
+}
+.grid1{
+    grid-column: 1 ;
+    grid-row: 1/3;
+    height: 250px;
+    background-color: purple;
+}
+.grid1 img,.grid4 img{
+    height: 400px;
+}
+.grid2{
+    grid-column: 2 ;
+    grid-row: 1;
+}
+.grid3{
+    grid-column: 2 ;
+    grid-row: 2;
+}
+.grid4{
+    grid-column: 3 ;
+    grid-row: 1/3;
+}
+.grid5{
+    grid-column: 4 ;
+    grid-row: 1;
+}
+.grid6{
+    grid-column: 4;
+    grid-row: 2;
 }
 .imgactivities{
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
 
+/*test 2 grid
+https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Grid_Layout*/
+.grid{
+    display:grid;
+    grid-template-columns: repeat (4, 1fr);
+    grid-gap: 40px;
+    grid-template-rows: 50% 50%;
+   /* grid-auto-rows: minmax(100px, auto); */
+   font-weight: bold;
+   height: auto; /*à vérifier l'utilité*/
+}
+.one{
+    grid-column: 1;
+    grid-row: 1/3;
+    background-color: cyan;
+    border-radius: 20px;
+    box-shadow: 2px 2px 1px grey;
+}
+.imgactivities1{
+    min-height: 500px;
+    min-width: 250px;
+}
+.two{
+    grid-column: 2;
+    grid-row: 1;
+    background-color:greenyellow;
+    border-radius: 20px;
+    box-shadow: 2px 2px 1px grey;
+}
+.three{
+    grid-column: 2;
+    grid-row: 2;
+    border-radius: 20px;
+    box-shadow: 2px 2px 1px grey;
+}
+.four{
+    grid-column: 3;
+    grid-row: 1/3;
+    background-color: cyan;
+    border-radius: 20px;
+    box-shadow: 2px 2px 1px grey;
+}
+.five{
+    grid-column: 4;
+    grid-row: 1;
+    background-color:greenyellow;
+    border-radius: 20px;
+    box-shadow: 2px 2px 1px grey;
+}
+.six{
+    grid-column: 4;
+    grid-row: 2;  
+    border-radius: 20px;
+    box-shadow: 2px 2px 1px grey;
+}
+.grid img{
+    max-height: 300px;
+    max-width: 70%;
+    object-fit: cover; /*le 06 01 change la photo vieux port uniquement*/
+}
+
+/*test 3 du GRID aide source
+https://www.youtube.com/watch?v=gvPyJ0rc944*/
+.gridTitle{
+	font-size: ;
+	font-family:Raleway, sans-serif;
+	text-align: left;
+	padding-left: 10px;
+}
+.container{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: 150px 150px;
+	grid-gap: 70px;
+	grid-auto-flow: dense; /*pas sûr de l'utilité*/
+    margin-bottom: 100px;
+}
+.gallery-item{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.gallery-item .image{
+	width: 100%;
+	height:100%;
+	overflow: hidden;
+}
+.gallery-item .image img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /*bingp!!!*/
+	object-position: 60% 50%; /* 50% ne convient pas à toutes les photos, par défaut c'est top left*/
+	border-radius: 20px 20px 0px 0px;
+	
+}
+.text{
+	font-weight: bold;
+	background-color: white;
+	border-radius:0px 0px 15px 15px;
+	padding: 20px;
+	text-align: left;
+	padding-left: 20px;
+	box-shadow: 2px 5px 10px grey;
+}
+.place1{
+	grid-row: span 2;
+	grid-column: 1;
+}
+.place2{
+	grid-row: 1;
+	grid-column: 2;
+}
+.place3{
+	grid-row: 2;
+	grid-column: 2;
+	height: 70%; /*pas satisfaisant car laisse de l'espace en dessous, pas aligné avec les autres*/
+    margin-top: 45px; /*ça marche bien mais l'écart en les 2 horizontalement est trop important*/
+}
+.place4{
+	grid-row: span 2;
+	grid-column: 3;
+}
+.place5{
+	grid-row: 1;
+	grid-column: 4;
+    height: 90%;
+}
+.place6{
+	grid-row: 2;
+	grid-column: 4;
+    height: 90%;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 500px){
+	.container{
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.place1,.place2,.place3,.place4,.place5,.place6{
+	grid-column: span 1; /*span 1 fait 2 colonnes, sans le span fait 1 colonne mais décentre tout à gauche*/
+	}
+	
+}
 /*FOOTER*/
 
-/*A FAIRE
-ajuster la marge
-J'ai perdu ce que j'avais fait
-le push a du supprimer un de mes commits par un autre*/
 footer{
     width: 100%;
+   
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     background-color: #F2F2F2;
     padding-top: 35px;
-    padding-left: 20px;
-    padding-right: 200px;
+    padding-left: 40px;
+    margin-top: 10px;
     
 }
-.footerblocks{
-    font-weight: bold;
+.footerelement{
+    display: flex;
+    flex-direction: column;
+    /*margin-right:250px ; margin right enlevé car empêche le responsive sur le footer et sur assistance notamment*/
+    width: 70%;
     
-    font-size: 0.8em;
-    
+}
+footer a{
+    padding-top: 10px;
 }
 .link{
     font-weight: normal;
     padding-right: 40px;
     
     
+}
+@media screen and (max-width: 780px){
+    footer{
+        flex-direction: column;
+    }
+    .footerelement{
+        margin-bottom: 15px;
+    }
+    section{
+        flex-direction: column-reverse; /*ok mais le bloc déborde*/
+    }
 }
 
 
