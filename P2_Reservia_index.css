@@ -13,8 +13,7 @@
 body{
     font-size: 1em;
     color: black;
-    margin-right : 20% auto;
-    margin-left: 20% ; /*problème ne s'aligne pas comme à droite, '20% auto' colle le body à gauche*/
+    margin: auto;
     max-width: 1446px;
     font-family: 'Raleway', sans-serif;
 }
@@ -69,28 +68,26 @@ nav{
     }
 
 /*FONTS*/
-h1{
-    font-size: 1em;
+.Titleheader{
+    font-size: 1.4em;
     }
-h2{
-    font-size: .8em; /*entre le .7 et le .8em*/
+.Descriptionheader, .Textinfo{
+    font-size: .9em; /*entre le .7 et le .8em*/
     color: #404040; /*couleur pas sûr, c'est plus noir ou plus light*/
 }
+.Textinfo{
+    /*max-width: 600px; je n'arrive pas à élargir à l'ensemble des mots
+    width: 400px;
+    aide visualisation espace : background-color: yellow; */
+}
 /*bricolage de placement des fonts*/
-.sectiontitles
-{
-   position: relative;
-   bottom: 10px;
+
 }
-.pnight{
+.p-article-blocks-items{ /*à enlever mais attention créer des problèmes sur l'icône géolocalisation*/
     position: relative;
     bottom: 40px;
 }
-.pnightaside{
-    position: relative;
-    bottom: 40px;
-    padding-left: 10px;
-}
+
 /*fin des FONTS*/
 
 .localisation{
@@ -218,62 +215,74 @@ h2{
 /*BLOCKS*/
 section{
     display: flex;
-    height: 624px;
-    justify-content: space-between;
-    margin-bottom: 70px;
-    padding-bottom: 10px;
-    
+    justify-content: space-around;
 }
 article{
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
     background-color: #F2F2F2;
     width: 65%;
-    height: 624px;
-    border-radius: 10px;
-    padding-left: 30px;
-    padding-top: 15px;
-    padding-right: 30px;
-    padding-bottom: 40px;
-    justify-content: space-between; /*center c'est bien, 
-    mais space between permet à 'afficher plus' d'être dessous les cartes de réservation !!*/
-    margin-bottom: 20px;
+
 }
-#location-blocks{
+.Section-title{
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-left: 50px;
+
+}
+#article-blocks{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: red;
+    align-items: space-around; /*quel effet réel ?*/
+    background-color: #F2F2F2;
+    padding-left: 30px;
+    padding-right: 30px;
+
+
     }
-.night{
-    height: 240px; /*pas du tout optimum*/
-    width: 25%;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 2px 2px 1px grey; /*tester plusieurs ombres partout pas que sur la droite et sinon tester bordure grise*/
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    margin: 17px;
-    align-content: center;
+.article-blocks-items{
+   background-color: white;
+   width: 30%;
+   border-radius: 10px;
+   box-shadow: 2px 2px 1px grey;
+   text-align:left;
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 30px;
+   
 }
-.imgnight{
-    width: 220px;
-    max-height: 113px;
+.img-article-items{
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 97%;
+    max-height: 120px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    padding:4px;
 }
-img{ /*régler la taille des images plus tard spécifiquement par bloc et non pour toutes*/
-    max-width: 500px; /*attention max height bloque l'agrandissment de width 
-    et inversement puisqu'il garde les proportions des photos
-    comment recadrer des photos ?*/
-    max-height: 500px;
-    }
+.itemnames{
+    font-size: 1em;
+    text-decoration: none;/*marche?*/
+    font-weight: bold;
+    font-family: Raleway, sans-serif;
+    color: black;
+    
+}
+.p-blocks-items{
+    color: black;
+    font-size: 0.8em;
+}
+.itemnames,.p-blocks-items {
+    padding-left: 10px;
+}
 .divrating{
     display: flex;
+    flex-direction: flex-start; /*besoin de rapprocher les étoiles entre elles !*/
+    padding-left: 10px;
 }
 .rating > span:hover:before {
    content: "\2605";
@@ -287,57 +296,81 @@ img{ /*régler la taille des images plus tard spécifiquement par bloc et non po
     /*changer la couleur d'un svg solution: 
     https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element et pour le choix de couleur:
     https://codepen.io/sosuke/pen/Pjoqqp*/
-    position: relative;
-    bottom:50px;
+    /*besoin de rapprocher les étoiles entre elles !*/
 }
 .nostar{
     width: 14px;
     height: 14px;
     opacity: 10%;
-    position: relative;
-    bottom:50px;
 }
+.More{
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Raleway, sans-serif;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 50px;
+    color: black;
 
+}
+/*ASIDE*/
 aside{
     width: 25%; /*à terme peut etre recalculer le bon pourcentage pour avoir une page ajusté plutot qu'en pixel*/
     background-color: #F2F2F2;
     border-radius: 10px;
     height: 624px; /*attention lorsque l'on rajoute des padding cela augmente la taille*/
     padding-left: 30px;
-    padding-top: 15px;
     padding-right: 30px;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around; /*?*/
+    flex-wrap: nowrap; /*?*/
     }
-.popularlocation{
-    height: 144px;
-    width: 335px;
+#flex-aside{ /*à voir l'utilité de cette div pour se replacer*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    }
+.top-aside{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 15px;
+}
+.Aside-title{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.fa-chart-line{
+        color: black;
+        height: 25px;
+        width: 25px;
+        background-color: #F2F2F2;
+   } 
+.aside-block{
     background-color: white;
     border-radius: 10px;
     box-shadow: 2px 2px 1px grey;
     padding: 5px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: no-wrap;
-    justify-content: flex-start;
-    margin-top: 34px;
-    
-    
+    flex-direction: row; /*met le block dans le aside*/
+    margin-top: 20px; /*sinon manque un div entre aside block et aside*/
 }
-.nightaside{
+.aside-block-items{
     display: flex;
     flex-direction: column;
-    padding-top: 10px;
+    height: 40%;
 }
 .imgaside{
     width:129px;
     max-height: 132px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
-    
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 
 /*2EME BLOCK ACTIVITIES*/
@@ -450,10 +483,12 @@ https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Grid_Layout*/
 /*test 3 du GRID aide source
 https://www.youtube.com/watch?v=gvPyJ0rc944*/
 .gridTitle{
-	font-size: ;
 	font-family:Raleway, sans-serif;
 	text-align: left;
 	padding-left: 10px;
+    font-size: 1.4em;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 .container{
 	display: grid;
@@ -540,6 +575,7 @@ footer{
     padding-top: 35px;
     padding-left: 40px;
     margin-top: 10px;
+    padding-bottom: 50px;
     
 }
 .footerelement{
