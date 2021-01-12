@@ -38,6 +38,7 @@ ul{
     color: #2078FD;
     font-weight: bold;
     padding-top: 50px;
+    padding-left: 30px;
 }
 nav a{ 
     text-decoration: none; /*enleve le surlignage*/
@@ -52,11 +53,11 @@ nav{
     justify-content: space-around;
     font-size: 0.9em;
 }
-.hebergementspage{
+.Hebergementspage{
     border-top: 3px solid #2078FD; /*attention le border top va trop à droite sur activités*/
     color: #2078FD;
 }
-.hebergementspage, .Activitiespage{
+.Hebergementspage, .Activitiespage{
     padding-top: 50px;
 }
 
@@ -72,13 +73,9 @@ nav{
     font-size: 1.4em;
     }
 .Descriptionheader, .Textinfo{
-    font-size: .9em; /*entre le .7 et le .8em*/
+    font-size: 1em; /*entre le .7 et le .8em*/
     color: #404040; /*couleur pas sûr, c'est plus noir ou plus light*/
-}
-.Textinfo{
-    /*max-width: 600px; je n'arrive pas à élargir à l'ensemble des mots
-    width: 400px;
-    aide visualisation espace : background-color: yellow; */
+    font-weight: lighter;
 }
 /*bricolage de placement des fonts*/
 .p-article-blocks-items{ /*à enlever mais attention créer des problèmes sur l'icône géolocalisation*/
@@ -94,8 +91,8 @@ nav{
     background-color: #F2F2F2;
     padding: 16px; /*padding enlève les bordures visibles*/
      /*attention marche pas*/
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
     height: 18px;
     width: 18px;
     position: relative; /*à vérifier le choix*/
@@ -107,7 +104,7 @@ nav{
     height: 50px;
     font-weight: bold; /*marche pas*/
     color: black; /*j'arrive pas plus foncé mais la couleur change*/
-    padding-left: 10px;
+    padding-left: 15px;
     border: solid .1em #F2F2F2;
     font-size: 1em;
     }
@@ -122,6 +119,9 @@ nav{
     font-size: 1em;
     color: white;
 }
+.fa-search{
+    display: none;
+}
 /*FILTRES*/
 #filter{
 	display: flex;
@@ -133,9 +133,12 @@ nav{
 	font-family: Raleway, serif;
 	font-weight: bold;
 }
+.text-icon:hover{
+    color: white;
+    background-color: #2078FD;
+}
 .filter-block{
 	display: flex;
-	justify-content: ;
 	width: 1400px;
 	flex-wrap: wrap;
 }
@@ -155,7 +158,7 @@ nav{
     width: 20px;
     height: 20px;
     position: relative;
-    left: 33px;
+    left: 37px;
 }
 .text-icon{
 	border: solid #F2F2F2 3px;
@@ -165,16 +168,19 @@ nav{
     text-decoration: none;
     font-size: 1.2em;
     padding-top: 15px;
-    padding-left: 35px;
+    padding-left: 45px;
     padding-right: 20px;
     color: black;
 }
 
 #INFO{
     display: flex;
-    justify-content: flex-start; /*pourquoi les 2 se collent ?*/
+    justify-content: flex-start; /*pourquoi les 2 se superposent à cause 
+    de position relative de svg inline fa?*/
+    align-items: center;
     padding: 10px;
     width: 100%;
+    margin-bottom: 15px;
     }
 
 .fa-info{
@@ -185,6 +191,9 @@ nav{
     border: solid #F2F2F2 2px;
     border-radius: 50px;
     padding: 5px;
+    position: static;
+    margin-right: 15px;
+    background-color: white;
 }
 
 /*BLOCKS*/
@@ -198,15 +207,13 @@ article{
     border-radius: 15px;
     background-color: #F2F2F2;
     width: 65%;
-
 }
-.Section-title{
+#Section-Title{
     font-size: 1.3em;
     font-weight: bold;
     padding-bottom: 10px;
     padding-top: 20px;
     padding-left: 50px;
-
 }
 #article-blocks{
     display: flex;
@@ -215,8 +222,6 @@ article{
     background-color: #F2F2F2;
     padding-left: 30px;
     padding-right: 30px;
-
-
     }
 .article-blocks-items{
    background-color: white;
@@ -227,7 +232,6 @@ article{
    display: flex;
    flex-direction: column;
    margin-bottom: 30px;
-   
 }
 .img-article-items{
     object-fit: cover;
@@ -238,19 +242,18 @@ article{
     border-top-left-radius: 20px;
     padding:6px;
 }
-.itemnames{
+.itemnames, .A-itemnames{
     font-size: 1em;
     text-decoration: none;/*marche?*/
     font-weight: bold;
     font-family: Raleway, sans-serif;
     color: black;
-    
 }
-.p-blocks-items{
+.p-blocks-items, .A-p-blocks-items{
     color: black;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
-.itemnames,.p-blocks-items {
+.itemnames,.p-blocks-items, .A-itemnames, .A-p-blocks-items {
     padding-left: 10px;
 }
 .divrating{
@@ -258,14 +261,7 @@ article{
     justify-content: flex-start;
     padding-left: 10px;
 }
-.rating > span:hover:before {
-   content: "\2605";
-   position: absolute; /*est-encore utile ?*/
-   top: 0; left: 0;
-}
 .stars{
-    width: 14px;
-    height: 14px;
     filter: invert(29%) sepia(100%) saturate(4175%) hue-rotate(210deg) brightness(99%) contrast(100%);
     /*changer la couleur d'un svg solution: 
     https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element et pour le choix de couleur:
@@ -273,16 +269,20 @@ article{
    
 }
 .nostar{
-    width: 14px;
-    height: 14px;
     opacity: 10%;
 }
+.stars, .nostar{
+    width: 14px;
+    height: 14px;
+    padding-bottom: 5px;
+}
+
 .More{
     font-size: 1.1em;
     text-decoration: none;
     font-weight: bold;
     font-family: Raleway, sans-serif;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     padding-top: 20px;
     padding-left: 50px;
     color: black;
@@ -290,10 +290,9 @@ article{
 }
 /*ASIDE*/
 aside{
-    width: 25%; /*à terme peut etre recalculer le bon pourcentage pour avoir une page ajusté plutot qu'en pixel*/
+    width: 25%; /*à terme peut etre recalculé le bon pourcentage pour avoir une page ajusté plutot qu'en pixel*/
     background-color: #F2F2F2;
     border-radius: 15px;
-    height: 624px; /*attention lorsque l'on rajoute des padding cela augmente la taille*/
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 45px;
@@ -306,14 +305,13 @@ aside{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    
-    
     }
 .top-aside{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-right: 15px;
+    padding-top: 15px;
 }
 .Aside-title{
     font-size: 1.3em;
@@ -324,6 +322,7 @@ aside{
         height: 25px;
         width: 25px;
         background-color: #F2F2F2;
+        border-radius: 0;
    } 
 .aside-block{
     background-color: white;
@@ -333,20 +332,34 @@ aside{
     display: flex;
     flex-direction: row; /*met le block dans le aside*/
     margin-top: 20px; /*sinon manque un div entre aside block et aside*/
-    
 }
-.aside-block-items{
-    display: flex;
+/*.aside-block-items{
+   display: flex;
     flex-direction: column;
-    height: 40%;
-}
+    height: 40%; 
+}*/
 .imgaside{
-    width:129px;
-    max-height: 132px;
+    width: 150px;
+    height: 150px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
-    object-fit: cover;
+    object-fit: cover; /*ne semble pas faire effet*/
     object-position: 50% 50%;
+}
+aside-block-items{
+    display: flex;
+    flex-direction: column;
+}
+.Astars{
+    filter: invert(29%) sepia(100%) saturate(4175%) hue-rotate(210deg) brightness(99%) contrast(100%);
+}
+.Anostar{
+    opacity: 10%;
+}
+.Astars, .Anostar {
+    width: 14px;
+    height: 14px;
+    padding-top: 25px;
 }
 /*2EME BLOCK ACTIVITIES à retirer*/
 .grid1{
@@ -355,7 +368,7 @@ aside{
 
 /*test 3 du GRID aide source
 https://www.youtube.com/watch?v=gvPyJ0rc944*/
-.gridTitle{
+#Grid-Title{
 	font-family:Raleway, sans-serif;
 	text-align: left;
 	padding-left: 30px;
@@ -469,108 +482,151 @@ footer a{
     font-weight: normal;
     padding-right: 40px;    
 }
-@media screen and (max-width: 780px){
-    /*HEADER*/
+/*MEDIA QUERIES*/
+
+/*mobile*/
+@media screen and (max-width: 780px){ /*ou max-device-width:480px pour tous les mobiles*/
+    /*HEADER mobile*/
     #logosite{
-        width: 15%;
+        width: 16%;
         margin: 15px;
+        margin-top: 30px;
     }
     #subscription{
-        margin-right: 10px;
+        margin-right: 15px;
+        font-size: 1.2em;
     }
     #link-header{
-    
         justify-content: flex-start;
         margin: auto;
         width: 100%;
     }
-    .hebergementspage{
+    .Hebergementspage{
         border-bottom: 3px solid #2078FD;
         border-top: none;
     }
     .Activitiespage{
         border-bottom: 3px solid lightgrey;
     }
-    .hebergementspage, .Activitiespage{
+    .Hebergementspage, .Activitiespage{
         padding-bottom: 20px;
         width: 100%;
         text-align: center;
-        font-size: 1.3em;
+        font-size: 1.6em;
     }
+    nav a:hover{ /*marche pour le header*/
+        border-top: none;}
     .Titleheader{
         margin-top: 40px;
+        width: 65%;
+        font-size: 1.9em;
     }
     .Titleheader, .Descriptionheader{
-       margin-left: 15px;
+        margin-left: 60px;
     }
+    .Descriptionheader{
+        font-size: 1.5em;
+    }
+
     .Textinfo{
         width: 100%; /*à vérifier*/
+        font-size: 1.4em;
     }
-    /*Filtres*/
-    .filterline{
-        flex-direction: column;
+    #search_bar{
+        text-align: center;
+        margin-top: 40px;
+        }
+    .fa-search{
+        display: inline;
+        color: white;
+        background-color: #2078FD;
+        border-radius: 20px;
+        position: relative;
+        left: -16px;
+        top: 26px;
+        height: 30px;
+        width: 30px;
+        padding: 25px;
+        }
+    .search_button{
+        display: none;
+        }
+    #city{
+        height: 80px;
+        font-size: 2em;
+        font-weight: normal;  
     }
-    .textfilter{
+    .localisation{
+    padding: 26px; /*padding enlève les bordures visibles*/
+     /*attention marche pas*/
+    height: 30px;
+    width: 30px;
+    position: relative; /*à vérifier le choix*/
+    top: 28px; /*top et left permettent de se coller à city*/
+    left: 4px;
+    margin-top: 10px;
+    border-top-left-radius: ;
+    border-bottom-left-radius:;
+    }
+    .searchicon{
+        color: white;
+        background-color: #2078FD;
+        border-radius: 20px;
+        }
+    /*Filtres mobile*/
+    
+    .text-filter{
         font-weight: bold;
-        font-size: 1.2em;
+        font-size: 1.5em;
+        width: 100%;
+        margin-left: 40px;
     }
     #filter{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: flex-start; /*centre le mot Filtres avec les blocs filterlabels*/
+        justify-content: flex-start;
+        align-content: space-around; 
         width: auto;
-        margin-left: 15px;
     }
-    .filterlabels{
-        height: 30px;
-        padding: 5px;
-        padding-right: 20px;
-        padding-left: 35px;
-        font-size: 1em;
-        margin-top: 20px;
+    .filter-block{
         display: flex;
         flex-direction: row;
-        /*YES aligne la police au centre des bulles de filtres*/
-            /*line-height: px; à explorer les possibilités*/
-            background-color: yellow;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-end; 
+        width: 90%;
+        margin-left: 0px;
     }
-    .filterlink{
-        height: 
-        width: 
-        
+    .filterlinks{
+        padding-top: 10px;
     }
-
-    .filtericons /*c'est l'image en svg directement, pas utilisé actuellement*/
-    {
-        width: 
-        height: 
-        
-        
-        padding: 
-        
-        position: 
-        left: 
-        
-        /*filter marche pas pour ces icônes, il change la couleur de toute la bulle et pas simplement le svg*/
+    .text-icon{
+        font-size: 1.5em;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
-    .svg-inline--fa { /*revérifier les tailles des icônes ce n'est pas bon*/}
-        
-    .fa-info{
-        
+    .fa-money-bill-wave, .fa-child, .fa-heart, .fa-dog{
+    padding: 20px;
+    width: 30px;
+    height: 30px;
+    left: 37px;
+}
+    #INFO{
+        margin-left: 45px;
+        width: 70%;
     }
-    /*FOOTER*/
+    
+    /*FOOTER mobile*/
     footer{
         flex-direction: column;
-        
     }
     .footerelement{
         margin-bottom: 15px;
         font-size: 1.2em;
         margin: auto; /*pas encore assez, il doit y avoir un padding*/
     }
-    /*Bloc activités GRID*/
+    /*Bloc activités GRID mobile*/
     .container{
 		grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(1, 1fr);
@@ -620,7 +676,7 @@ footer a{
 	object-position: 50% 50%; /* le premier 50% ne change rien, par défaut c'est top left*/
 	
 }
-    /*Bloc principal*/
+    /*Bloc principal mobile*/
     section{
         flex-direction: column-reverse; /*permet de mettre aside en premier, ok mais le bloc déborde*/
     }
@@ -636,15 +692,14 @@ footer a{
     #article-blocks{
         /*width: 100%; seulement cet id ça marche aussi pour centrer, mais c'est petit en largeur alors qu'avec article en plus mais à 95% de width ça marche bien*/
     }
-    .Section-title{
+    #Section-Title{
     font-size: 1.7em;
     padding-left: 30px;
     }
     .article-blocks-items{
         width: 100%;
         justify-content: center; /*marche pas*/
-        /*min-height: 300px; pas terrible car la photo n'est plus aligné au block item*/
-       
+        /*min-height: 300px; pas terrible car la photo n'est plus aligné au block item*/  
         font-size: 1.3em;
     }
     .img-article-items{
@@ -663,7 +718,43 @@ footer a{
     font-size: 1.3em;
     padding-left: 30px;
     }
+    aside{
+        width: 95%;
+        border-radius: 0;
+    }
+    .Aside-title{
+        font-size: 2em;
+    }
+    .fa-chart-line{
+        height: 40px;
+        width: 40px;
+    }
+    .aside-block{
+        /*height: 300px; change la taille mais le reste ne suit pas*/
+        width: 98%;
+    }
+    .aside-block-items{ /*bouge le texte pas la photo*/
+        padding-right: 15px;
+        height: 100%;
+        width: 60%;
+        padding-left:15px;
+        padding-top: 10px; 
+    }
+    .imgaside{
+        min-width: 250px;
+        height:300px;
+    }
+    .Astars, .Anostar {
+    width: 25px;
+    height: 25px;
+    padding-top: 100px;}
+    .A-itemnames{
+        font-size: 1.5em;
+        width: 70%;
+    } 
+    .A-p-blocks-items {
+       font-size: 1.3em;
+        }
 }
-
 
 
