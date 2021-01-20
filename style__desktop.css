@@ -114,6 +114,19 @@ header h2,
     border: solid .1em #F2F2F2;
     font-size: 1em;
     }
+    /* modification du input via des préfixe vendeur/vendor prefix
+    https://developer.mozilla.org/fr/docs/Glossaire/Pr%C3%A9fixe_Vendeur*/
+::-webkit-input-placeholder{ /* chrome */
+    color:black;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color:  black;  
+}
+::-moz-placeholder{  /* Firefox 19+ */
+    color:black;}
+:-ms-input-placeholder { /* internet explorer et edge*/ 
+    color: black;  
+}
 .search_button{
     background-color: #2078FD;
     padding: 15px;
@@ -416,7 +429,7 @@ aside{
 	border-radius:0px 0px 15px 15px;
 	padding: 20px;
 	text-align: left;
-	padding-left: 20px;
+	
 	box-shadow: 2px 5px 10px grey;
 }
 .place1{

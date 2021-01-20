@@ -1,73 +1,7 @@
-                                /*MEDIA QUERIES*/
-
-/*ATTENTION le media query tablette fait bugguer le media query mobile*/
-@media screen and (min-width: 780px) and (max-width: 991px){
-                                        
-                                        /*VERSION Tablette*/
-                                    
-                                    /*ASIDE les plus populaires*/
-    section{
-        flex-direction: column-reverse; /*permet de mettre aside en premier, ok mais le bloc déborde*/
-    }
-    aside{
-        width: 95%;
-        display: flex;
-        flex-direction: row;
-    }
-    .top-aside{
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-right: 15px;
-        padding-top: 15px;
-    }
-    #flex-aside{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    .aside-block{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: nowrap;
-        margin-top: 0px;
-    }
-    .aside-block-items{
-        width: 90%;
-        display: flex;
-        flex-direction: row; /*row place le texte à droite de la photo, column en dessous*/
-        justify-content: flex-end;
-        border-radius: 20px;
-        box-shadow: 2px 5px 10px grey;
-    }
-    .imgaside{
-    max-width: 100px;
-    max-height: 100px;
-    object-fit: cover; /*ne semble pas faire effet*/
-    object-position: 50% 50%;
-    }
-    .Astars, 
-    .Anostar {
-    padding-top: 5px;
-    }
-    .aside-block-items-text{
-
-    }
-                                /* ARTICLE hébergements */
-    article{
-        background-color: white;
-        width: 98%;}
-    #article__blocks{
-        background-color: white;
-    }
-}
-
                                 /* VERSION Mobile */
 
 
-@media screen and (max-width: 780px){ /*ou max-device-width:480px pour tous les mobiles*/
+@media screen and (max-width: 767px){ /*ou max-device-width:480px pour tous les mobiles*/
                             
                             /* HEADER mobile */
     header div img{
@@ -127,20 +61,25 @@
     .header__search-bar{
         display: flex;
         width: 100%;
-        background-color: red;
+       /*background-color:;*/
+        position: relative;
+        margin-left: 5px;
     }
     .localisation{ /*lien et icône*/
     padding: 20px; /*padding enlève les bordures visibles*/
     height: 24px;
     width: 24px;
+    position: relative;
     bottom: 10px; /*top et left permettent de se coller à city*/
-    left: 1px;
+    left: -20px;
     margin-top: 10px;
+    z-index: 1;
     }
     #city{
-        padding: 30px 15px 30px 15px; /*top right bottom left*/
+        padding: 30px 15px 30px 75px; /*top right bottom left*/
         font-size: 1.2em;
-        width: 240px;
+        width: 100%;
+        position: absolute; /*permet de prendre toute la largeur*/
     /*padding-left: 15px;
     font-size: 1em;*/
     }
@@ -163,7 +102,7 @@
     .search_button2{ /*besoin d'aligner le bouton avec l'icone loupe*/
     display: inline;
     position: relative;
-    left: -10px;
+    left: 200px; /*pas responsive*/
     height: 65px;
     width: 65px;
     color: white;
@@ -185,7 +124,6 @@
         justify-content: flex-start;
         align-content: space-around; 
         width: 100%;
-        background-color: grey;
     }
     .filter__text{
         font-weight: bold;
@@ -193,14 +131,12 @@
         width: 100%;
         margin-left: 15px;
     }
-    
     .filter__block{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start; 
         width: 100%;
-        background-color: red;
         padding-left: 0px;
     }
     .filter__block__links{
@@ -208,22 +144,25 @@
     }
     .filter__block__links__icons__text{
         font-size: 1em;
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding: 15px;
+        padding-left: 60px;
     }
     .filter__block__links__icons{
     flex-direction: row;
-    background-color: blue;
-    /*justify-content: flex-start;
-    margin-left: 0;
-    padding-left: 0;
-    rien ne marche sur ce bloc mais c'est là qu'il y a un écart bizzare !!*/
+    position: relative;
+    /*justify-content: flex-start;*/
+    margin-left: 0px;
+    padding-right: 10px; /*optionnel*/
+    /*rien ne marche sur ce bloc mais c'est là qu'il y a un écart bizzare !!*/
     }
     .fa-money-bill-wave, .fa-child, .fa-heart, .fa-dog{
-    padding: 15px;
+    padding: 17px;
     width: 20px;
     height: 20px;
-    left: 37px;
+    position: absolute;
+    top:0px;
+    left: 0px; 
+    /*left: 37px;*/
     }
     .INFO{
         margin-left: 15px;
