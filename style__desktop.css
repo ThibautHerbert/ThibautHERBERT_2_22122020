@@ -13,11 +13,12 @@
                             /*  Mesures générales  */
 
 /* pas possible décale beaucoup de choses:
-dans le header, le bloc hébergement;
+dans le header, le bloc hébergement;*//*
  *{
     padding: 0;
     margin:0;
-    box-sizing: border-box;}*/
+    box-sizing: border-box;
+    }*/
 
 body{
     font-size: 1em;
@@ -33,33 +34,36 @@ mark{
 a{text-decoration: none;
     color: black;
 }
-    
                                     /*  HEADER  */
-header{}
-
-.header__top{}
-
-header div{
-    margin-left: 20px;
-    margin-right: 20px;
+header{
+    padding-right: 30px;
+    margin-left: 35px;
 }
-header img{
-    width: 8%; /*flex-grow marche pas même en mettant un display flex*/
-    float: left;
+header .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+header .top .logo{
+    flex-grow: 1;
+}
+header .top img{
+    width: auto;
+    height: 40px;
     margin-top: 25px;
 }
-#subscription{
-    float: right;
-    color: #2078FD;
-    font-weight: bold;
-    padding-top: 53px;
-    padding-left: 30px;
-}
-header nav a{ 
+header .top nav{
+    display: flex;
+    flex-direction: row;
+    }
+header .top nav a{ 
     padding-right: 30px;
     padding-left: 30px;
+    text-align: center;
+    
 }
-header nav a:hover{ /*marche pour le header*/
+header .top nav a:hover{ 
     color: #2078FD;
     border-top: 3px solid #2078FD;}
 
@@ -71,46 +75,54 @@ header nav a:hover{ /*marche pour le header*/
 .Activitiespage{
     padding-top: 50px;
 }
-header nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
-    }
-                                /* HEADER FONTS */
-header h1{
+.Activitiespage{
+    border-top: 3px solid transparent;
+}
+.subscription{
+    color: #2078FD;
+    font-weight: bold;
+    
+    padding-left: 30px;
+}
+
+                                /* HEADLINES grands titres*/
+.headlines{
+    margin-left: 20px;
+}
+.headlines h1{
     font-size: 1.4em;
     }
-header h2, 
+.headlines h2, 
 .INFO h2{
     font-size: 1em; 
-    color: black; /*couleur pas sûr, c'est plus noir ou plus light*/
+    color: black;
     font-weight: lighter;
 }
-                                 /* RECHERCHE */
-.header__search-bar{
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 20px;
+.headlines h1,
+.headlines h2{
+    padding-left: 20px;
+}
+                                 /* BARRE DE RECHERCHE */
+.headlines__search-bar{
+    margin-left: 20px;
+    margin-top: 15px;
+    position: relative;
 }
 .localisation{
     background-color: #F2F2F2;
-    padding: 16px; /*padding enlève les bordures visibles*/
-     /*attention marche pas*/
+    padding: 16px;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
     height: 18px;
     width: 18px;
-    position: relative; /*à vérifier le choix*/
-    bottom: 10px; /*top et left permettent de se coller à city*/
-    left: 4px;
-    margin-top: 10px;
+    position: absolute;
     }
 #city{
     height: 50px;
-    font-weight: bold; /*marche pas*/
-    color: black; /*j'arrive pas plus foncé mais la couleur change*/
-    padding-left: 15px;
+    font-weight: bold; /*besoin de préfixe vendeur*/
+    color: black;
+    padding-left: 55px;
+    margin-left: 10px;
     border: solid .1em #F2F2F2;
     font-size: 1em;
     }
@@ -149,6 +161,7 @@ header h2,
 #filter{
 	display: flex;
 	margin:20px;
+    margin-left: 40px;
 }
 .filter__text{
 	font-size: 1.2em;
@@ -166,6 +179,7 @@ header h2,
 }
 .filter__block__links__icons{
     display: flex;
+    margin-top: 10px;
 }
 .filter__block__links__icons__text{
     border: solid #F2F2F2 3px;
@@ -194,17 +208,14 @@ header h2,
 }
 .INFO{
     display: flex;
-    justify-content: flex-start; /*pourquoi les 2 se superposent à cause 
-    de position relative de svg inline fa?*/
+    justify-content: flex-start;
     align-items: center;
     padding: 10px;
     width: 100%;
     margin-bottom: 15px;
-    margin-left: 10px;
+    margin-left: 30px;
     }
 .fa-info{
-    /*filter: invert(29%) sepia(100%) saturate(4175%) hue-rotate(210deg) brightness(99%) contrast(100%); 
-    attention la couleur de la bordure n'est pas bonne*/
     width: 15px;
     height: 15px;
     border: solid #F2F2F2 2px;
@@ -215,9 +226,10 @@ header h2,
     background-color: white;
 }
                                     /* BLOCKS */
-section{
+.main-content{
     display: flex;
     justify-content: space-around;
+    margin-left: 20px;
 }
 article{
     display: flex;
@@ -225,63 +237,65 @@ article{
     border-radius: 15px;
     background-color: #F2F2F2;
     width: 65%;
+    box-sizing: border-box;
 }
 #Hebergement{
     font-size: 1.3em;
     font-weight: bold;
     padding-top: 20px;
-    padding-left: 50px;
+    padding-left: 30px;
 }
 #article__blocks{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: #F2F2F2;
-    padding-left: 30px;
-    padding-right: 30px;
+    margin: 20px;
 }
 .article__blocks__items{
    background-color: white;
    width: 30%;
    border-radius: 20px;
-   box-shadow: 2px 5px 10px grey;
-   text-align:left;
+   box-shadow: 0px 0px 5px 0px rgba(0,0,0,.1);/*0px 0px 5px -4px;*/
    display: flex;
-   flex-direction: column;
    margin-bottom: 30px;
+}
+.hebergement__link{
+    width: 100%;
 }
 .img-article-items{
     object-fit: cover;
     object-position: 50% 50%;
     width: 96%;
-    max-height: 125px; /*aide à déterminer la taille de la photo, comment bien choisir*/
+    height: 125px;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     padding:6px;
 }
+.blocks__items__text{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
 .itemnames, .A-itemnames{
     font-size: 1em;
-    text-decoration: none;/*marche?*/
     font-weight: bold;
     font-family: Raleway, sans-serif;
     color: black;
-    width: 75%;
+    margin:0px;
+    padding-bottom: 5px;
 }
 .p-blocks-items, 
 .A-p-blocks-items{
     color: black;
     font-size: 0.9em;
-}
-.itemnames,
-.p-blocks-items, 
-.A-itemnames, 
-.A-p-blocks-items {
-    padding-left: 10px;
+    margin:0px;
+    padding-bottom: 5px;
 }
 .divrating{
     display: flex;
     justify-content: flex-start;
-    padding-left: 10px;
+    padding-left: 0px;
 }
 .stars{
     filter: invert(29%) sepia(100%) saturate(4175%) hue-rotate(210deg) brightness(99%) contrast(100%);
@@ -296,21 +310,22 @@ article{
 .nostar{
     width: 14px;
     height: 14px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
+    padding-top: 5px;
 }
 .More{
     font-size: 1.1em;
     text-decoration: none;
     font-weight: bold;
     font-family: Raleway, sans-serif;
-    padding-bottom: 40px;
-    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-top: 0px;
     padding-left: 50px;
     color: black;
 }
                                     /* ASIDE */
 aside{
-    width: 25%; /*à terme peut etre recalculé le bon pourcentage pour avoir une page ajusté plutot qu'en pixel*/
+    width: 25%;
     background-color: #F2F2F2;
     border-radius: 15px;
     padding-left: 30px;
@@ -319,7 +334,7 @@ aside{
     display: flex;
     flex-direction: column;
 }
-#flex-aside{ /*sépare le titre des items*/
+#flex-aside{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -344,18 +359,17 @@ aside{
     border-radius: 0;
 } 
 .aside-block{
-    /*background-color: white;*/
     display: flex;
-    flex-direction: column; /*met le block dans le aside*/
-    margin-top:0px; /*sinon manque un div entre aside block et aside*/
+    flex-direction: column;
+    margin-top:0px; 
     justify-content: space-between;
 }
 .imgaside{
-    width: 160px;
-    height: 160px;
+    width: 130px;
+    height: 130px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
-    object-fit: cover; /*ne semble pas faire effet*/
+    object-fit: cover;
     object-position: 50% 50%;
 }
 .aside-block-items{
@@ -363,16 +377,20 @@ aside{
     flex-direction: row;
     flex-wrap: nowrap;
     border-radius: 20px;
-    box-shadow: 2px 5px 10px grey;
-    margin-bottom: 0px; /*à diminuer pour laisser plus d'espace entre les clics*/
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.1);
+    margin-bottom: 20px;
     padding: 5px;
     background-color: white;
 }
 .aside-link{
-    margin-top: 20px; /*pas idéal pour permettre aux items d'être au même niveau que les items hébergements*/
+    margin-top: 20px;
 }
 .aside-block-items-text{
-
+    padding-left: 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .Astars{
     filter: invert(29%) sepia(100%) saturate(4175%) hue-rotate(210deg) brightness(99%) contrast(100%);
@@ -384,23 +402,29 @@ aside{
 .Anostar {
     width: 14px;
     height: 14px;
-    padding-top: 25px;
+}
+.A-divrating{
+    display: flex;
+    flex-grow: 3;
+    align-items: flex-end;
+    padding-bottom: 8px;
 }
                             /* GRID */
                             /*aide source https://www.youtube.com/watch?v=gvPyJ0rc944*/
-#Activites{
-	font-family:Raleway, sans-serif;
-	text-align: left;
-	padding-left: 30px;
-    font-size: 1.4em;
+
+#Activites{                    
+	padding-left: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
     padding-bottom: 10px;
     padding-top: 40px;
+    margin-left: 20px;
 }
 .container{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	grid-auto-rows: 150px 150px;
-	grid-gap: 70px;
+	grid-auto-rows: 200px 200px;
+	grid-gap: 30px;
 	grid-auto-flow: dense; /*pas sûr de l'utilité*/
     margin-bottom: 100px;
     margin-left: 30px;
@@ -411,16 +435,18 @@ aside{
 	height: 100%;
 	position: relative;
 }
-.container__gallery__item .container__gallery__item__image{ /*.container__gallery__item pas utile à vérifier avec Marceau*/
+.container__gallery__item .container__gallery__item__image{ 
 	width: 100%;
 	height:100%;
 	overflow: hidden;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.1);
 }
-.container__gallery__item .container__gallery__item__image img{ /*.container__gallery__item pas utile à vérifier avec Marceau*/
+.container__gallery__item .container__gallery__item__image img{ 
 	width: 100%;
 	height: 100%;
-	object-fit: cover; /*bingp!!!*/
-	object-position: 60% 50%; /* 50% ne convient pas à toutes les photos, par défaut c'est top left*/
+	object-fit: cover; 
+	object-position: 50% 40%; /* 50% ne convient pas à toutes les photos, par défaut c'est top left*/
 	border-radius: 20px 20px 0px 0px;
 }
 .container__gallery__item__text{
@@ -429,8 +455,7 @@ aside{
 	border-radius:0px 0px 15px 15px;
 	padding: 20px;
 	text-align: left;
-	
-	box-shadow: 2px 5px 10px grey;
+	box-shadow: 2px 5px 10px #F2F2F2;
 }
 .place1{
 	grid-row: span 2;
@@ -439,12 +464,13 @@ aside{
 .place2{
 	grid-row: 1;
 	grid-column: 2;
+    height:90%;
 }
 .place3{
 	grid-row: 2;
 	grid-column: 2;
-	height: 70%; /*pas satisfaisant car laisse de l'espace en dessous, pas aligné avec les autres*/
-    margin-top: 45px; /*ça marche bien mais l'écart en les 2 horizontalement est trop important*/
+	height: 60%;
+    align-self: flex-end;
 }
 .place4{
 	grid-row: span 2;
@@ -453,31 +479,15 @@ aside{
 .place5{
 	grid-row: 1;
 	grid-column: 4;
-    height: 90%;
+    height: 80%;
 }
 .place6{
 	grid-row: 2;
 	grid-column: 4;
-    height: 90%;
-    margin-top: 20px;
-}
-@media screen and (max-width: 500px){ /*le footer tient grâce au media screen positionné ici pourquoi ?????*/
-	/*Bloc activités GRID*/
-    .container{
-		grid-template-columns: repeat(1, 1fr);
-	}
-	.place1,
-    .place2,
-    .place3,
-    .place4,
-    .place5,
-    .place6{
-	grid-column: span 1; /*span 1 fait 2 colonnes, sans le span fait 1 colonne mais décentre tout à gauche*/
-	}
-
+    height: 70%;
+    align-self: flex-end;
 }
                                     /* FOOTER */
-
 footer{
     width: 100%;
     display: flex;
@@ -491,17 +501,15 @@ footer{
 footer div{
     display: flex;
     flex-direction: column;
-    margin-right:250px ;
-} /*margin right enlevé car empêche le responsive sur le footer et sur assistance notamm
-}*/
-footer nav{ /*aligne les liens en colonne*/
+    margin-right:200px ;
+}
+footer nav{
     display: flex;
     flex-direction: column;  
 }
 footer a{
     padding-top: 10px;
 }
-
 footer a:hover{
     color: #0065FC;
 }

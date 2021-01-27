@@ -1,84 +1,87 @@
-                                /* VERSION Mobile */
-
-
+                                /*MEDIA QUERIES*/
 @media screen and (max-width: 767px){ /*ou max-device-width:480px pour tous les mobiles*/
                             
+                            /* VERSION Mobile */
                             /* HEADER mobile */
-    header div img{
-        width: 35%;
-        margin-left: 10px;
-        margin-top: 20px;
-        margin-bottom: 0px;
-    }
-    #subscription{
-        margin-right: 0px;
-        font-size: 1.2em;
-        padding-top: 30px;
-        margin-top: 10px;
-    }
-    header nav{
-        justify-content: flex-start;
-        margin: auto;
+    header{
+        margin: 0;
         width: 100%;
     }
+    header .top .logo{
+        margin-left: 20px; 
+    }
+    header .top{
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: center;
+        margin-top: 20px;
+    }
+    /* essai
+    header .top > *{
+        flex:1 1 100%;
+    }*/
+    header .top img{
+        height: 50px;
+        margin-top: 0px;
+    }
+    header .top nav{
+        order: 3;
+        width: 100%;
+        padding: 15px 0px;
+        margin-right: 0; 
+    }
+    header .top nav a{
+    
+    }
+    .subscription{
+        font-size: 1.2em;
+    }
     .Hebergementspage{
-        border-bottom: 3px solid #2078FD;
+        border-bottom: 4px solid #2078FD;
         border-top: none;
     }
     .Activitiespage{
-        border-bottom: 3px solid lightgrey;
+        border-bottom: 4px solid #F2F2F2;
     }
     .Hebergementspage, 
     .Activitiespage{
         padding-bottom: 20px;
         padding-top: 30px;
+        padding-left: 50px;
+        padding-right: 50px;
         width: 100%;
-        text-align: center;
         font-size: 1.2em;
+        margin:0;
     }
-    header h1{
-        margin-top: 40px;
-        width: 100%;
-        font-size: 1.5em;
+                                    /*  HEADLINES Grands titres  */
+   .headlines h1{
+        width: 90%;
+   }
+    .headlines h1, 
+    .headlines h2{
+        padding-left: 0px;
     }
-    header h1, 
-    header h2{
-        margin-left: 0px;
-        text-align: left;
-    }
-    header h2{
-        font-size: 1em;
+    .headlines h2{
         margin-bottom: 40px;
     }
                             /* bouton search mobile */
-    header div{
-        text-align: center;
-        margin-top: 0px;
-    }
-    .header__bottom{
-
-    }
-    .header__search-bar{
+    
+    .headlines__search-bar{
         display: flex;
         width: 100%;
-       /*background-color:;*/
-        position: relative;
-        margin-left: 5px;
+        margin-left: 15px;
     }
     .localisation{ /*lien et icône*/
-    padding: 20px; /*padding enlève les bordures visibles*/
-    height: 24px;
-    width: 24px;
-    position: relative;
-    bottom: 10px; /*top et left permettent de se coller à city*/
-    left: -20px;
-    margin-top: 10px;
-    z-index: 1;
+        position: relative;
+        bottom: 10px; /*top et left permettent de se coller à city*/
+        left: -20px;
+        margin-top: 10px;
+        z-index: 1;
     }
     #city{
-        padding: 30px 15px 30px 75px; /*top right bottom left*/
+        padding-left: 35px; /*top right bottom left*/
         font-size: 1.2em;
-        width: 100%;
+        /*width: 100%;*/
         position: absolute; /*permet de prendre toute la largeur*/
     /*padding-left: 15px;
     font-size: 1em;*/
@@ -90,33 +93,28 @@
         display: inline;
         color: white;
         position: relative;
-        left: -5px;
-        top: 0px;
-        height: 23px;
-        width: 23px;
-        background-color: #2078FD;
+        left: -7px;
+        top: -5px;
+        height: 20px;
+        width: 20px;
+        background-color:#2078FD;
+        border-radius: 20px;
     }
     .search_button{
         display: none;
     }
     .search_button2{ /*besoin d'aligner le bouton avec l'icone loupe*/
-    display: inline;
-    position: relative;
-    left: 200px; /*pas responsive*/
-    height: 65px;
-    width: 65px;
-    color: white;
-    background-color: #2078FD;
-    border-radius: 20px;
-    border:none;
-    }
-    /*.searchicon{
+        display: inline;
+        position: relative;
+        left: 220px;
+        height: 55px;
+        width: 55px;
         color: white;
         background-color: #2078FD;
         border-radius: 20px;
-    }*/
+        border:none;
+    }
                                 /* Filtres mobile */
-    
     #filter{
         display: flex;
         flex-direction: row;
@@ -124,11 +122,9 @@
         justify-content: flex-start;
         align-content: space-around; 
         width: 100%;
+        margin: 10px;
     }
     .filter__text{
-        font-weight: bold;
-        font-size: 1.4em;
-        width: 100%;
         margin-left: 15px;
     }
     .filter__block{
@@ -137,7 +133,7 @@
         flex-wrap: wrap;
         justify-content: flex-start; 
         width: 100%;
-        padding-left: 0px;
+        padding-left: 10px;
     }
     .filter__block__links{
         padding-top: 10px;
@@ -148,69 +144,71 @@
         padding-left: 60px;
     }
     .filter__block__links__icons{
-    flex-direction: row;
-    position: relative;
-    /*justify-content: flex-start;*/
-    margin-left: 0px;
-    padding-right: 10px; /*optionnel*/
-    /*rien ne marche sur ce bloc mais c'est là qu'il y a un écart bizzare !!*/
+        flex-direction: row;
+        position: relative;
+        margin-left: 0px;
+        padding-right: 10px;
     }
     .fa-money-bill-wave, .fa-child, .fa-heart, .fa-dog{
-    padding: 17px;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top:0px;
-    left: 0px; 
-    /*left: 37px;*/
+        padding: 17px;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top:0px;
+        left: 0px; 
     }
     .INFO{
         margin-left: 15px;
         width: 100%;
     }
     .INFO h2{
-        width: 100%; /*à vérifier*/
+        width: 100%;
         font-size: 1.1em;
     }
                                         /* Bloc principal mobile */
 
                                         /* Aside Les plus populaires */
-    section{
+    .main-content{
         flex-direction: column-reverse; /*permet de mettre aside en premier, ok mais le bloc déborde*/
+        margin-left: 0px;
     }
         aside{
-        width: 95%;
+        width: 100%;
         border-radius: 0;
+        padding-left: 20px;
+        margin-right: 0px;
+        padding-right: 20px;
+        padding-bottom: 30px;
     }
     .Aside-title{
         font-size: 1.6em;
+    }
+    .top-aside{
+        justify-content: space-around;
     }
     .fa-chart-line{
         height: 30px;
         width: 30px;
     }
     .aside-block{
-        /*height: 300px; change la taille mais le reste ne suit pas*/
-        width: 98%;
+        width: 95%;
     }
-    .aside-block-items{ /*bouge le texte pas la photo*/
+    .aside-block-items{
         height: 180px;
         width: 100%;
     }
     .imgaside{
-        /*width: 50%; *//*aucun effet sur la taille de l'image !*/
+        width: 45%; 
         height:100%;
         object-fit: cover;
     }
-    .Astars, 
-    .Anostar {
-    /*padding-top: 100px;}*/}
     .A-itemnames{
         font-size: 1.2em;
         width: 90%;
     } 
     .A-p-blocks-items {
        font-size: 1em;
+       margin-top: 10px;
         }
                                 /* Article Hébergements */
     article{
@@ -223,15 +221,13 @@
         width: 100%; 
         margin: auto;
         padding-left: 10px;
-        padding-right: 10px;
     }
     #Hebergement{
-    font-size: 1.7em;
-    padding-left: 20px;
+        font-size: 1.5em;
+        padding-left: 20px;
     }
     .article__blocks__items{
         width: 95%;
-        /*height: 100px; pas terrible car la photo n'est plus aligné au block item*/
         font-size: 1.3em;
         margin-left: 0px;
     }
@@ -243,22 +239,27 @@
         font-size: 1em;
     }
     .stars, .nostar{
-    height: 20px;
-    width: 20px;
-    margin-bottom: 10px;
+        height: 20px;
+        width: 20px;
+        margin-bottom: 10px;
     }
     .More{
-    font-size: 1.3em;
-    padding-left: 30px;
+        font-size: 1.3em;
+        padding-left: 30px;
     }
-
-
                                     /* Bloc activités GRID mobile */
+    #Activites{
+        font-size: 1.7em;
+    }
     .container{
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(1, 1fr);
-        grid-gap: 100px;
+        grid-gap: 40px;
         width: 95%;
+        margin-bottom: 70px;
+    }
+    .container__gallery__item .container__gallery__item__image img{
+        object-position: 50% 40%; /* le premier change : axe abscisse, le 2eme : axe ordonnée, par défaut c'est top left*/
     }
     .place1{
         grid-column: 1;
@@ -267,6 +268,7 @@
     .place2{
         grid-column: 1;
         grid-row: 2;
+        object-position: 50% 60%;
     }
     .place3{
         grid-column: 1;
@@ -290,20 +292,16 @@
         height: 100%;
         margin-top: 0px;
     }
+    .container__gallery{
+        height: 200px;
+    }
     .container__gallery__item{
-        max-height: 180px;
+        height: 150px;
         width: 100%;
     }
     .container__gallery__item__text{
         font-size: 1.2em;
     }
-    #Activites{
-        font-size: 1.9em;
-    }
-    .container__gallery__item .container__gallery__item__image img{
-    object-position: 50% 50%; /* le premier 50% ne change rien, par défaut c'est top left*/
-    }
-
                                                 /* FOOTER mobile */
     footer{
         flex-direction: column;
@@ -313,6 +311,5 @@
         margin-bottom: 15px;
         font-size: 1.2em;
         margin-right:0px;
-        margin-left: 0px;
     }
 }

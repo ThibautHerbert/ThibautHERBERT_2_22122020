@@ -6,22 +6,25 @@
         <link rel="stylesheet" type="text/css" href="style__desktop.css">
         <link rel="stylesheet" type="text/css" href="style__mobile.css">
         <link rel="stylesheet" type="text/css" href="style__tablet.css">
-        <title>Reservia</title>
+        <title>Reservia v25 janvier</title>
     </head>
     <body>
         <header>
-            <div class="header__top">
-                <img src="images/logo/Reservia@3x.png" alt="logoreservia"> 
-                <a href="#" id="subscription">S'inscrire</a>
+            <div class="top">
+                <div class="logo">
+                    <img src="images/logo/Reservia@3x.png" alt="logoreservia"> 
+                </div>
+                <nav>
+                    <a href="#Hebergement" class="Hebergementspage">Hébergements</a>
+                    <a href="#Activites" class="Activitiespage">Activités</a>              
+                </nav>
+                <a href="#" class="subscription">S'inscrire</a>
             </div>
-            <nav>
-                <a href="#Hebergement" class="Hebergementspage">Hébergements</a>
-                <a href="#Activites" class="Activitiespage">Activités</a>              
-            </nav>
-            <div class="header__bottom">
+        </header>
+            <div class="headlines">
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <h2>En plein centre ville ou en pleine nature</h2>
-                <div class="header__search-bar"> <!-- attention 2 div sans class mais aucun CSS dessus-->
+                <div class="headlines__search-bar"> <!-- attention 2 div sans class mais aucun CSS dessus-->
                     <a href="#"><img src="icones/map-marker-alt-solid.svg" class="localisation" alt="icone localisation"></a> <!--le bouton doit localiser-->
                         <input type="search" name="city" id="city" placeholder="Marseille, France">
                         <button type="button" class="search_button" value="Marseille, France">Rechercher <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
@@ -31,10 +34,9 @@
                         </button>-->
                         <button type="button" class="search_button2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
                             </path></svg></button>
-                    
                 </div>
             </div>
-        </header>
+        
 <!-- décider de la méthode pour les svg avec font-awesome--> 
         <div id="filter">
             <p class="filter__text">Filtres</p>
@@ -77,7 +79,7 @@
                     </a>
                 </div>
             </div>
-	    </div>
+        </div>
         <div class="INFO">
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="info" 
             class="svg-inline--fa fa-info fa-w-6" role="img" xmlns="http://www.w3.org/2000/svg" 
@@ -86,87 +88,105 @@
             <h2>Plus de 500 logements sont disponibles dans cette ville</h2> 
         </div>
         <!--BODY-->
-        <section>
+        <div class="main-content">
             <article>
-                    <h1 id="Hebergement">Hébergements à Marseille</h1> 
+                    <h2 id="Hebergement">Hébergements à Marseille</h2> 
                     <div id="article__blocks">
                         <div class="article__blocks__items"> 
-                            <a href="#"><img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" class="img-article-items" alt="auberge la cannebière">
-                            <h3 class="itemnames">Auberge la Cannebière</h3>
-                            <p class="p-blocks-items">Nuit à partir de <mark>25€</mark></p>
-                            <div class="divrating">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars"> <!--étoiles-->
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="nostar">
-                            </div>
-                            </a>
-                        </div>
-                        <div class="article__blocks__items">
-                            <a href="#"> <img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" class="img-article-items" alt="hotel du port">
-                            <h3 class="itemnames">Hôtel du port</h3>
-                            <p class="p-blocks-items">Nuit à partir de <mark>52€</mark></p>
-                            <div class="divrating">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars"> <!--étoiles-->
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars">
-                            </div>
+                            <a href="#" class="hebergement__link">
+                                <img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" class="img-article-items" alt="auberge la cannebière">
+                                <div class="blocks__items__text">
+                                    <h3 class="itemnames">Auberge la Cannebière</h3>
+                                    <p class="p-blocks-items">Nuit à partir de <mark>25€</mark></p>
+                                    <div class="divrating">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars"> <!--étoiles-->
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="nostar">
+                                    </div>
+                                </div>
                             </a>
                         </div>
                         <div class="article__blocks__items"> 
-                            <a href="#"><img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" class="img-article-items" alt="hotel les mouettes">
-                            <h3 class="itemnames">Hôtel Les mouettes</h3>
-                            <p class="p-blocks-items">Nuit à partir de <mark>76€</mark></p>
-                            
-                            <div class="divrating">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars"> <!--étoiles-->
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="nostar">
-                            </div>
-                            </a>
-                        </div>
-                        <div class="article__blocks__items">
-                            <a href="#"> <img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" class="img-article-items" alt="hotel de la mer">
-                            <h3 class="itemnames">Hôtel de la mer</h3>
-                            <p class="p-blocks-items">Nuit à partir de <mark>46€</mark></p>
-                            <div class="divrating">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars"> <!--étoiles-->
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="nostar">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="nostar">
-                            </div>
+                            <a href="#" class="hebergement__link">
+                                <img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" class="img-article-items" alt="hotel du port">
+                                <div class="blocks__items__text">
+                                    <h3 class="itemnames">Hôtel du port</h3>
+                                    <p class="p-blocks-items">Nuit à partir de <mark>52€</mark></p>
+                                    <div class="divrating">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars"> <!--étoiles-->
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars">
+                                    </div>
+                                </div>
                             </a>
                         </div>
                         <div class="article__blocks__items"> 
-                            <a href="#"><img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" class="img-article-items" alt="auberge le panier">
-                            <h3 class="itemnames">Auberge Le Panier</h3>
-                            <p class="p-blocks-items">Nuit à partir de <mark>23€</mark></p>
-                            <div class="divrating">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars"> <!--étoiles-->
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="nostar">
-                            </div>
+                            <a href="#" class="hebergement__link">
+                                <img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" class="img-article-items" alt="hotel les mouettes">
+                                <div class="blocks__items__text">
+                                    <h3 class="itemnames">Hôtel Les mouettes</h3>
+                                    <p class="p-blocks-items">Nuit à partir de <mark>76€</mark></p>
+                                    
+                                    <div class="divrating">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars"> <!--étoiles-->
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="nostar">
+                                    </div>
+                                </div>
                             </a>
                         </div>
                         <div class="article__blocks__items">
-                            <a href="#"> <img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" class="img-article-items" alt="hotel chez amina">
-                            <h3 class="itemnames">Hôtel chez Amina</h3>
-                            <p class="p-blocks-items">Nuit à partir de <mark>96€</mark></p>
-                            <div class="divrating">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars"> <!--étoiles-->
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars">
-                                <img src="icones/star-solid.svg" alt="étoiles" class="stars">
-                            </div>
+                            <a href="#" class="hebergement__link">
+                                <img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" class="img-article-items" alt="hotel de la mer">
+                                <div class="blocks__items__text">
+                                    <h3 class="itemnames">Hôtel de la mer</h3>
+                                    <p class="p-blocks-items">Nuit à partir de <mark>46€</mark></p>
+                                    <div class="divrating">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars"> <!--étoiles-->
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="nostar">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="nostar">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="article__blocks__items"> 
+                            <a href="#" class="hebergement__link">
+                                <img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" class="img-article-items" alt="auberge le panier">
+                                <div class="blocks__items__text">
+                                    <h3 class="itemnames">Auberge Le Panier</h3>
+                                    <p class="p-blocks-items">Nuit à partir de <mark>23€</mark></p>
+                                    <div class="divrating">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars"> <!--étoiles-->
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="nostar">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="article__blocks__items">
+                            <a href="#" class="hebergement__link">
+                                <img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" class="img-article-items" alt="hotel chez amina">
+                                <div class="blocks__items__text">
+                                    <h3 class="itemnames">Hôtel chez Amina</h3>
+                                    <p class="p-blocks-items">Nuit à partir de <mark>96€</mark></p>
+                                    <div class="divrating">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars"> <!--étoiles-->
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars">
+                                        <img src="icones/star-solid.svg" alt="étoiles" class="stars">
+                                    </div>
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -175,7 +195,7 @@
             <aside> <!--les plus populaires sur la droite-->
                 <div id="flex-aside">
                     <div class="top-aside">
-                        <h1 class="Aside-title">Les plus populaires</h1> 
+                        <h2 class="Aside-title">Les plus populaires</h2> 
                         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chart-line" 
                         class="svg-inline--fa fa-chart-line fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" 
                         viewBox="0 0 512 512"><path fill="currentColor" d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z">
@@ -188,7 +208,7 @@
                                 <div class="aside-block-items-text">
                                         <h3 class="A-itemnames">Hôtel Le soleil du matin</h3>
                                         <p class="A-p-blocks-items">Nuit à partir de 128€</p>
-                                        <div class="divrating">
+                                        <div class="A-divrating">
                                             <img src="icones/star-solid.svg" alt="étoiles" class="Astars"> <!--étoiles-->
                                             <img src="icones/star-solid.svg" alt="étoiles" class="Astars">
                                             <img src="icones/star-solid.svg" alt="étoiles" class="Astars">
@@ -207,7 +227,7 @@
                                    <div class="aside-block-items-text">
                                         <h3 class="A-itemnames">Au coeur de l'eau Chambres d'hôtes</h3>
                                         <p class="A-p-blocks-items">Nuit à partir de 71€</p>
-                                        <div class="divrating">
+                                        <div class="A-divrating">
                                             <img src="icones/star-solid.svg" alt="étoiles" class="Astars"> <!--étoiles-->
                                             <img src="icones/star-solid.svg" alt="étoiles" class="Astars">
                                             <img src="icones/star-solid.svg" alt="étoiles" class="Astars">
@@ -224,7 +244,7 @@
                                 <div class="aside-block-items-text">
                                     <h3 class="A-itemnames">Hôtel Tout bleu et Blanc</h3>
                                     <p class="A-p-blocks-items">Nuit à partir de 68€</p>
-                                    <div class="divrating">
+                                    <div class="A-divrating">
                                         <img src="icones/star-solid.svg" alt="étoiles" class="Astars"> <!--étoiles-->
                                         <img src="icones/star-solid.svg" alt="étoiles" class="Astars">
                                         <img src="icones/star-solid.svg" alt="étoiles" class="Astars">
@@ -237,71 +257,71 @@
                     </div>
                 </div>
             </aside>
-        </section>
+        </div>
      <!-- GRID -->
         <h1 id="Activites">Activités à Marseille</h1>
-		<div class="container">
-			<div class="container__gallery place1">
-				<a href="#">
-                    <div class="container__gallery__item">
-                        <div class="container__gallery__item__image">
-                            <img src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="marseille">
-                        </div>
-                        <div class="container__gallery__item__text">Vieux Port</div>
-                    </div>
-				</a>
-			</div>
-			<div class="container__gallery place2">
+        <div class="container">
+            <div class="container__gallery place1">
                 <a href="#">
                     <div class="container__gallery__item">
                         <div class="container__gallery__item__image">
-                            <img src="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="marseille">
+                            <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="marseille">
+                        </div>
+                        <div class="container__gallery__item__text">Vieux Port</div>
+                    </div>
+                </a>
+            </div>
+            <div class="container__gallery place2">
+                <a href="#">
+                    <div class="container__gallery__item">
+                        <div class="container__gallery__item__image">
+                            <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="marseille">
                         </div>
                         <div class="container__gallery__item__text">Fort de Pomègues</div>
                     </div>
                 </a>
-			</div>
-			<div class="container__gallery place3">
-				<a href="#">
-                    <div class="container__gallery__item">
-                        <div class="container__gallery__item__image">
-                            <img src="images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="marseille">
-                        </div>
-                        <div class="container__gallery__item__text">Iles du Frioul</div>
-                    </div>
-				</a>
-			</div>
-			<div class="container__gallery place4">
+            </div>
+            <div class="container__gallery place3">
                 <a href="#">
                     <div class="container__gallery__item">
                         <div class="container__gallery__item__image">
-                            <img src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="marseille">
+                            <img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="marseille">
+                        </div>
+                        <div class="container__gallery__item__text">Iles du Frioul</div>
+                    </div>
+                </a>
+            </div>
+            <div class="container__gallery place4">
+                <a href="#">
+                    <div class="container__gallery__item">
+                        <div class="container__gallery__item__image">
+                            <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="marseille">
                         </div>
                         <div class="container__gallery__item__text">Parc National des Calanques</div>
                     </div>
                 </a>
-			</div>
-			<div class="container__gallery place5">
+            </div>
+            <div class="container__gallery place5">
                 <a href="#">
                     <div class="container__gallery__item">
                         <div class="container__gallery__item__image">
-                            <img src="images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="marseille">
+                            <img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="marseille">
                         </div>
                         <div class="container__gallery__item__text">Notre-Dame-de-la-Garde</div>
                     </div>
                 </a>
-			</div>
-			<div class="container__gallery place6">
+            </div>
+            <div class="container__gallery place6">
                 <a href="#">
                     <div class="container__gallery__item">
                         <div class="container__gallery__item__image">
-                            <img src="images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="marseille">
+                            <img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="marseille">
                         </div>
                         <div class="container__gallery__item__text">Parc Longchamp</div>
                     </div>
                 </a>
-			</div>
-		</div>
+            </div>
+        </div>
         <!--FOOTER-->
         <footer>
             <div>
@@ -312,7 +332,7 @@
                     <a href="#">Données et confidentialité</a>
                 </nav>
             </div>
-            <div>	
+            <div>   
                 <h3>Nos hébergements</h3>
                  <nav>    
                     <a href="#">Charte qualité</a>

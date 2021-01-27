@@ -1,6 +1,4 @@
                                 /*MEDIA QUERIES*/
-
-/*ATTENTION le media query tablette fait bugguer le media query mobile*/
 @media screen and (min-width: 768px) and (max-width: 991px){
                                         
                                         /*VERSION Tablette*/
@@ -14,27 +12,31 @@
     }                    
                                     /* FILTRES  */
     .filter__block__links__icons__text{
-        margin-top: 20px;
+        margin-top: 10px;
         padding-bottom: 15px;
     }
     .svg-inline--fa{
-        top: 20px;
+        top: 10px;
     }
                                     /*ASIDE les plus populaires*/
-    section{
+    .main-content{
         flex-direction: column-reverse; /*permet de mettre aside en premier*/
+        margin-left: 0px;
     }
     aside{
-        width: 95%;
+        width: 98%;
         display: flex;
         flex-direction: row;
         border-radius: 0px;
+    }
+    .aside-link{
+        width: 100%;
     }
     .top-aside{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin-right: 15px;
+        margin-right: 50px;
         padding-top: 15px;
     }
     #flex-aside{
@@ -43,7 +45,7 @@
         width: 100%;
     }
     .aside-block{
-        width: 100%;
+        width: 97%;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -60,25 +62,18 @@
         box-shadow: 2px 5px 10px grey;
     }
     .imgaside{
-    width: 40%;
+    width: 50%;
     height: 100%;
     object-fit: cover; /*ne semble pas faire effet*/
     object-position: 50% 50%;
     }
-    .Astars, 
-    .Anostar {
-    padding-top: 5px;
-    }
-    .aside-block-items-text{
-        
-    }
    .A-itemnames{
-        font-size: 0.9em;
+        font-size: 0.8em;
         width: 90%;
     } 
     .A-p-blocks-items {
-       /*font-size: 1em;*/
-        }
+       font-size: .8em;
+    }
                                 /* ARTICLE hébergements */
     article{
         background-color: white;
@@ -87,61 +82,53 @@
         background-color:white;
         width: 98%;
     }
-    .article__blocks__items{
-    
-    }
     .itemnames{
         width: 100%;
     }
-
                                         /* Grid Activités */
-
     .container{
         grid-auto-rows: 120px 120px;
         grid-gap: 20px;
-        width: 95%;
     }
     .container__gallery__item__text{
         padding: 10px;
         font-size: .8em;
-
     }
     .place1{
-        height: 105%;
-    }
-    .place2{
-        height: 105%;
+        height: 100%;
     }
     .place3{
         height: 75%;
-        margin-top: 40px;
+    }
+    .place4{
+        height: 95%;
+    }
+    .place5{
+        height: 75%;
     }
     .place6{
         height: 80%;
-        margin-top: 40px;
     }
                                         /* FOOTER */
     footer{
         padding-top: 15px;
         margin-top: 0px;
-        padding-bottom: 30px;    
-}
+        padding-bottom: 30px;
+    }
     footer div{
         margin-right: 80px;
-} /*margin right enlevé car empêche le responsive sur le footer et sur assistance notamm
-}*/
+    }
     footer h3{
         font-size: 1.1em;
     }
     footer nav{ /*aligne les liens en colonne*/
         font-size: 0.9em;
-}
+    }
     footer a{
         padding-top: 10px;
-}
-
+    }
     footer a:hover{
     color: #0065FC;
-}
+    }
  
 }
