@@ -24,10 +24,16 @@
         margin-left: 0px;
     }
     aside{
-        width: 98%;
+        width: 100%;
         display: flex;
         flex-direction: row;
         border-radius: 0px;
+    }
+    .fa-chart-line{
+        height: 70px;
+        width: 70px;
+        top: 0px;
+        left:0px;
     }
     .aside-link{
         width: 100%;
@@ -36,19 +42,21 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin-right: 50px;
-        padding-top: 15px;
+        padding-top: 0px;
+        width: 100%;
+        margin-right: 0px;
     }
     #flex-aside{
         display: flex;
         flex-direction: column;
+        align-items: center;
         width: 100%;
     }
     .aside-block{
-        width: 97%;
+        width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-wrap: nowrap;
         margin-top: 0px;
     }
@@ -85,6 +93,9 @@
     .itemnames{
         width: 100%;
     }
+    .More{
+        padding-left: 30px;
+    }
                                         /* Grid Activités */
     .container{
         grid-auto-rows: 120px 120px;
@@ -119,10 +130,11 @@
         margin-right: 80px;
     }
     footer h3{
-        font-size: 1.1em;
+        font-size: 0.9em;
+        margin-bottom: 10px;
     }
     footer nav{ /*aligne les liens en colonne*/
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
     footer a{
         padding-top: 10px;
