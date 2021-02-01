@@ -31,9 +31,9 @@
         padding: 15px 0px;
         margin-right: 0; 
     }
-    header .top nav a{
-    
-    }
+    header .top nav a:hover{ 
+        border-top: none;
+}
     .subscription{
         font-size: 1.2em;
         padding-right: 15px;
@@ -98,10 +98,11 @@
         display: inline;
         color: white;
         position: relative;
-        left: -5px;
-        top: -5px;
-        height: 60px;
-        width: 60px;
+        left: 0px;
+        top: 0px;
+        height: 40px;
+        width: 40px;
+        padding: 10px;
         background-color:#2078FD;
         border-radius: 20px;
     }
@@ -111,9 +112,9 @@
     .search_button2{ /*besoin d'aligner le bouton avec l'icone loupe*/
         display: inline;
         position: relative;
-        left: 230px;
-        height: 55px;
-        width: 55px;
+        left: 220px;
+        height: 50px;
+        width: 50px;
         color: white;
         background-color: #2078FD;
         border-radius: 20px;
