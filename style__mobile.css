@@ -17,10 +17,6 @@
         align-items: center;
         margin-top: 20px;
     }
-    /* essai
-    header .top > *{
-        flex:1 1 100%;
-    }*/
     header .top img{
         height: 50px;
         margin-top: 0px;
@@ -86,10 +82,7 @@
     #city{
         padding-left: 35px; /*top right bottom left*/
         font-size: 1.2em;
-        /*width: 100%;*/
         position: absolute; /*permet de prendre toute la largeur*/
-    /*padding-left: 15px;
-    font-size: 1em;*/
     }
      #city:active {
     background-color: #2078FD;
@@ -109,7 +102,7 @@
     .search_button{
         display: none;
     }
-    .search_button2{ /*besoin d'aligner le bouton avec l'icone loupe*/
+    .search_button2{ 
         display: inline;
         position: relative;
         left: 220px;
@@ -180,7 +173,7 @@
 
                                         /* Aside Les plus populaires */
     .main-content{
-        flex-direction: column-reverse; /*permet de mettre aside en premier, ok mais le bloc déborde*/
+        flex-direction: column-reverse; /*permet de mettre aside en premier*/
         margin-left: 0px;
     }
     aside{
