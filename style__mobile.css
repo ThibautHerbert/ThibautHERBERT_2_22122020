@@ -199,13 +199,17 @@
         width: 100%;
     }
     .aside-block-items{
-        height: 180px;
+        height: 150px;
         width: 100%;
     }
     .imgaside{
-        width: 45%; 
+        width: 130px; 
         height:100%;
         object-fit: cover;
+        object-position: 50% 50%;
+    }
+    .imgaside--2{
+        width: 140px;
     }
     .A-itemnames{
         font-size: 1.1em;
