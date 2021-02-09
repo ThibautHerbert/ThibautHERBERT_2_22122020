@@ -5,7 +5,6 @@
                             /* HEADER mobile */
     header{
         margin: 0;
-        width: 100%;
         padding-right: 0px;
     }
     header .top .logo{
@@ -13,7 +12,6 @@
     }
     header .top{
         flex-wrap: wrap;
-        width: 100%;
         align-items: center;
         margin-top: 20px;
     }
@@ -23,10 +21,13 @@
     }
     header .top nav{
         order: 3;
-        width: 100%;
         padding: 15px 0px;
-        margin-right: 0; 
+        width: 100%;
     }
+    header .top nav a{ 
+    padding-right: 0px;
+    padding-left: 0px;
+}
     header .top nav a:hover{ 
         border-top: none;
 }
@@ -48,8 +49,9 @@
         padding-left: 50px;
         padding-right: 50px;
         width: 100%;
-        font-size: 1.2em;
+        font-size: 1.0em;
         margin:0;
+
     }
                                     /*  HEADLINES Grands titres  */
    .headlines h1{
@@ -69,8 +71,8 @@
     
     .headlines__search-bar{
         display: flex;
-        width: 100%;
-        margin-left: 15px;
+        margin: 0 20px;
+        position: relative;
     }
     .localisation{ /*lien et icône*/
         position: relative;
@@ -82,20 +84,20 @@
     #city{
         padding-left: 35px; /*top right bottom left*/
         font-size: 1.2em;
-        position: absolute; /*permet de prendre toute la largeur*/
+        position: absolute; /*absolute permet de prendre toute la largeur*/
     }
      #city:active {
     background-color: #2078FD;
      }
     .fa-search{ /*loupe*/
         display: inline;
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        padding: 5px;
         color: white;
-        position: relative;
-        left: 0px;
-        top: 0px;
-        height: 50px;
-        width: 50px;
-        padding: 17px;
+        height: 30px;
+        width: 30px;
         background-color:#2078FD;
         border-radius: 15px;
     }
@@ -105,9 +107,10 @@
     .search_button2{ 
         display: inline;
         position: relative;
-        left: 220px;
-        height: 40px;
-        width: 40px;
+        left: 215px;
+        height: 45px;
+        width: 45px;
+        padding: 25px;
         color: white;
         background-color: #2078FD;
         border-radius: 15px;
@@ -120,7 +123,6 @@
         flex-wrap: wrap;
         justify-content: flex-start;
         align-content: space-around; 
-        width: 100%;
         margin: 10px;
     }
     .filter__text{
@@ -158,11 +160,6 @@
     }
     .info{
         margin-left: 15px;
-        width: 100%;
-    }
-    .info h2{
-        width: 100%;
-        font-size: 1.1em;
     }
     .fa-info{
         position: relative;
@@ -223,13 +220,16 @@
     article{
         margin-top: 10px;
         background-color: #fdfdfd;
+        width: 100%;
+        padding-left: 10px;
+        margin: auto;
     }
     article, 
     #article__blocks{
         background-color: #ffffff;
-        width: 100%; 
-        margin: auto;
-        padding-left: 10px;
+         
+        
+        
     }
     #Hebergement{
         font-size: 1.5em;
@@ -267,11 +267,11 @@
                                     /* Bloc activités GRID mobile */
     #Activites{
         font-size: 1.7em;
+        padding-left: 20px;
     }
     .container{
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(1, 1fr);
-        width: 90%;
         margin-bottom: 0px;
         padding-bottom:30px;
         margin: 20px;
@@ -328,7 +328,6 @@
                                                 /* FOOTER mobile */
     footer{
         flex-direction: column;
-        width: 100%;
         padding-bottom: 30px; 
     }
     footer div{   
@@ -337,5 +336,60 @@
     }
     footer nav{
          margin: 10px 0px 30px 0px;
+    }
+}
+                                            /* MEDIA QUERIES Mobile format très petit  */
+@media screen and (max-width: 320px){ 
+                  
+
+                                  /*  HEADLINES Grands titres  */                               
+    .headlines{
+        margin-left: 10px;
+    }
+    .headlines h1{
+        font-size: 1.3em;
+    }
+                                    /* bouton search */
+    .fa-search{ /*loupe*/
+        left: 10px;
+        bottom: 10px;
+        padding: 5px;
+        height: 30px;
+        width: 30px;
+    }
+    .search_button2{ 
+        left: 180px;
+        height: 45px;
+        width: 45px;
+        padding: 25px;
+        color: white;
+        background-color: #2078FD;
+        border-radius: 15px;
+        border:none;
+    }
+    #city{
+        width: 100%
+    }
+                            /* Article Hébergements */
+    #Hebergement{
+        font-size: 1.3em;
+    }
+    /* aside */
+    .top-aside h2{
+        font-size: 1.3em;
+        width: 100%;
+    }
+    .fa-chart-line{
+        margin-right: 5px;
+    }
+    .aside-block-items-text h3{
+    font-size: 1em;
+    }  
+    .aside-block-items-text p{
+    font-size: 0.9em;
+    }
+                                /* ACTIVITES GRID*/
+    h2 #Activites{
+        padding-left: 10px;
     }
 }

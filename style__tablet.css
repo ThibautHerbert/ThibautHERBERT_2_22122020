@@ -97,6 +97,9 @@
         padding-left: 30px;
     }
                                         /* Grid Activités */
+    #Activites{ 
+        padding-left: 30px;
+    }
     .container{
         grid-auto-rows: 120px 120px;
         grid-gap: 20px;
